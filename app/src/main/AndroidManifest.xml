@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EarningApp">
         <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WithdrawalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RechargeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MinorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Recharge_History_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UPI_Information_Activity"
+            android:exported="false" />
+        <activity
             android:name=".TransactionDetailsActivity"
             android:exported="false" />
         <activity

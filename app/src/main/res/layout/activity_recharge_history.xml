@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recharge_History_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/lative_1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recharge History"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="18dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_round_chevron_left_24"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/lative_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/bgstrockblack"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order No. -"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3434354 4544534543"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time -"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021 - 04 - 12 09:00 AM"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount -"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021 - 04 - 12 09:00 AM"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/bgstrockblack"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order No. -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3434354 4544534543"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/bgstrockblack"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order No. -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3434354 4544534543"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/bgstrockblack"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order No. -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3434354 4544534543"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@drawable/bgstrockblack"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order No. -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3434354 4544534543"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount -"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 04 - 12 09:00 AM"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

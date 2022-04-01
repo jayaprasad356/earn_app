@@ -5,10 +5,88 @@
     android:layout_height="match_parent"
     tools:context=".fragment.CallUsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Call Us Fragment" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/bg6">
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/circularwhitebackground"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout1">
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Casino Merlin"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/layout1"
+                android:id="@+id/merlin_txt"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Working Hours(10:00 AM-4:00 PM)"
+                android:textSize="13dp"
+                android:layout_below="@+id/merlin_txt"
+                android:id="@+id/working_txt"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We are here to help you as soon"
+                android:textSize="13dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/working_txt"
+                android:layout_marginTop="20dp"
+                android:id="@+id/help_txt"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="as possible"
+                android:textSize="13dp"
+                android:layout_below="@+id/help_txt"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Me"
+                android:textColor="#22E614"
+                android:background="@drawable/bgwhite"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingEnd="30dp"/>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
 
 </FrameLayout>
