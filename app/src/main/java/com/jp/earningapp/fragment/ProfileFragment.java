@@ -10,16 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.Recharge_History_Activity;
 import com.jp.earningapp.TransactionDetailsActivity;
 import com.jp.earningapp.UPI_Information_Activity;
+import com.jp.earningapp.WithdrawalActivity;
 
 
 public class ProfileFragment extends Fragment {
 
-    RelativeLayout relayout_1;
-    RelativeLayout relayout_5;
+    RelativeLayout relayout_1,withdrawal_layout,miner_layout,recharge_layout;
 
 
     public ProfileFragment() {
@@ -33,7 +34,26 @@ public class ProfileFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_profile, container, false);
 
         relayout_1 = rootview.findViewById(R.id.relayout_1);
-        relayout_5 = rootview.findViewById(R.id.relayout_5);
+        recharge_layout = rootview.findViewById(R.id.recharge_layout);
+        withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
+        miner_layout = rootview.findViewById(R.id.miner_layout);
+
+        withdrawal_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), WithdrawalActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        miner_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MinorActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         relayout_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +63,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        relayout_5.setOnClickListener(new View.OnClickListener() {
+        recharge_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Recharge_History_Activity.class);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,73 +10,45 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UPI : test@okokbank.in"
-        android:textSize="18dp"
-        android:textColor="#101010"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="UPI : test@okokbank.in"
+        android:textColor="#101010"
+        android:textSize="18dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="My Balance Rs. 2500"
-        android:textSize="18dp"
         android:textColor="#B1B1B1"
-        android:layout_margin="20dp"/>
+        android:textSize="18dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_rupee1"
-        android:hint="Please enter the withdrawal amount"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:padding="15dp"
-        android:background="@drawable/bg7"/>
+        android:background="@drawable/bg7"
+        android:drawableStart="@drawable/ic_rupee1"
+        android:hint="Enter the withdrawal amount"
+        android:padding="15dp" />
 
-    <LinearLayout
+
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/bgcurvegreen">
+        android:layout_height="wrap_content"
+        android:text="Withdrawal"
+        android:layout_margin="30dp"
+        android:textAllCaps="false" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Withdraw"
-        android:textSize="15dp"
-        android:textColor="#FFFFFF"
-        android:layout_marginStart="120dp"
-        android:padding="10dp"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_rupee"
-            android:layout_marginTop="10dp"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="INCLUDES OF 5% GST MONDAY TO SUNDAY 10:00-17:00,"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:textSize="12dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WITHDRAWAL WILL ARRIVE WITHIN 24 HOURS,MINIMUM IS 110 RS"
-        android:textSize="12dp"
-        android:layout_marginStart="10dp"/>
-
-
-
-
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:text="INCLUDES OF 5% GST MONDAY TO SUNDAY 10:00-17:00,WITHDRAWAL WILL ARRIVE WITHIN 24 HOURS,MINIMUM IS 110 RS"
+        android:textSize="10dp" />
 
 
 

@@ -10,627 +10,574 @@
         android:layout_height="match_parent"
         android:layout_margin="05dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
 
             <RelativeLayout
-                android:id="@+id/layout1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/circularwhitebackground"
-                android:backgroundTint="#000">
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/aulia_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:text="Nadila Aulia"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <RelativeLayout
-                android:id="@+id/layout2"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:layout_below="@+id/aulia_txt"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/bg2">
-
-                <TextView
-                    android:id="@+id/your_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="25dp"
-                    android:text="Today Profit"
-                    android:textColor="#FFFF"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/number_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/your_txt"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:drawableStart="@drawable/ic_rupee"
-                    android:text="2"
-                    android:textColor="#FFFF"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Balance"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ten_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/your_txt"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="20dp"
-                    android:drawableStart="@drawable/ic_rupee"
-                    android:text="10"
-                    android:textColor="#FFFF"
-                    android:textSize="35dp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:id="@+id/linear_2"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_below="@+id/layout2"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="110dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg3"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="#E61C1C"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Machines"
-                        android:textColor="#E61C1C"
-                        android:textSize="8dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="110dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg4"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="#7047CF"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Active Machines"
-                        android:textColor="#7047CF"
-                        android:textSize="8dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="110dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bgbluecurvecolor"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="#490CD8"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Profits"
-                        android:textColor="#4B08E6"
-                        android:textSize="8dp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/common_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_2"
-                android:layout_margin="10dp"
-                android:text="Common Module"
-                android:textColor="#000"
-                android:textSize="18dp" />
-
-            <RelativeLayout
-                android:id="@+id/relayout_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/common_txt"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
-
-                        <TextView
-                            android:id="@+id/recharge_txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="UPI Information"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
-
-
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                    android:id="@+id/layout1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circularwhitebackground"
+                    android:backgroundTint="#000">
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relayout_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_1"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
+                <TextView
+                    android:id="@+id/aulia_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:text="Nadila Aulia"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
                 <RelativeLayout
+                    android:id="@+id/layout2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="110dp"
+                    android:layout_below="@+id/aulia_txt"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg2">
+
+                    <TextView
+                        android:id="@+id/your_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Today Profit"
+                        android:textColor="#FFFF"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/number_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/your_txt"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_rupee"
+                        android:text="2"
+                        android:textColor="#FFFF"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Balance"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ten_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/your_txt"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:drawableStart="@drawable/ic_rupee"
+                        android:text="10"
+                        android:textColor="#FFFF"
+                        android:textSize="35dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/layout2"
                     android:orientation="horizontal">
 
-                    <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+                    <LinearLayout
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg3"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#E61C1C"
+                            android:textSize="15dp" />
 
-                    </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Machines"
+                            android:textColor="#E61C1C"
+                            android:textSize="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg4"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#7047CF"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Active Machines"
+                            android:textColor="#7047CF"
+                            android:textSize="8dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="110dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bgbluecurvecolor"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#490CD8"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Profits"
+                            android:textColor="#4B08E6"
+                            android:textSize="8dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/common_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_2"
+                    android:layout_margin="10dp"
+                    android:text="Common Module"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:id="@+id/relayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/common_txt"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/upi_icon" />
+
+                        <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="About Us"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/recharge_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="UPI Information"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
 
 
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/account_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_2"
-                android:layout_margin="10dp"
-                android:text="Account Options"
-                android:textColor="#000"
-                android:textSize="18dp" />
-
-            <RelativeLayout
-                android:id="@+id/relayout_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/account_txt"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+                        </RelativeLayout>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                     </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:text="Withdrawal"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
-
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/relayout_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_3"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
-
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/relayout_2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_below="@+id/relayout_1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/about_us" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="About Us"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                     </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="8dp"
-                            android:text="My Miner"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
-
-
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                 </RelativeLayout>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relayout_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_4"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
-
-                <RelativeLayout
+                <TextView
+                    android:id="@+id/account_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_below="@+id/relayout_2"
+                    android:layout_margin="10dp"
+                    android:text="Account Options"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:id="@+id/withdrawal_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_txt"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/withdrawal_lightblue" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Withdrawal"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
 
                     </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/miner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/withdrawal_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/withdrawal_lightblue" />
+
+                        <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Recharge History"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="My Miner"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
 
 
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relayout_6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_5"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+                        </RelativeLayout>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                     </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/recharge_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/miner_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginStart="50dp">
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/recharge_history" />
 
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="8dp"
-                            android:text="My Profit"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Recharge History"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
 
 
-                    </RelativeLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relayout_7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relayout_6"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/bgcurvecolor1">
+                        </RelativeLayout>
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                     </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recharge_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="5dp">
+                        android:orientation="horizontal">
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/profit" />
+
+                        <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Share invite"
-                            android:textColor="#000"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
 
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="My Profit"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
                     </RelativeLayout>
 
+                </RelativeLayout>
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
-                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+                <RelativeLayout
+                    android:id="@+id/relayout_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profit_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
 
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/share_invite" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Share invite"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                    </RelativeLayout>
 
                 </RelativeLayout>
 
             </RelativeLayout>
 
         </RelativeLayout>
-
-    </RelativeLayout>
 
     </ScrollView>
 

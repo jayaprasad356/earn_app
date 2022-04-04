@@ -10,11 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.jp.earningapp.Recharge2Activity;
 import com.jp.earningapp.MinorActivity;
-import com.jp.earningapp.NewsActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
-import com.jp.earningapp.TransactionDetailsActivity;
 import com.jp.earningapp.WithdrawalActivity;
 
 public class HomeFragment extends Fragment {
@@ -69,8 +68,8 @@ public class HomeFragment extends Fragment {
         news_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NewsActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), MinorActivity.class);
+//                startActivity(intent);
             }
         });
 

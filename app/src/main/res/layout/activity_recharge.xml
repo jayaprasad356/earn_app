@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,62 +10,86 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="My Balance Rs. 2500"
-        android:textSize="18dp"
         android:textColor="#B1B1B1"
-        android:layout_margin="20dp"/>
+        android:textSize="18dp" />
 
-    <TextView
+    <EditText
+        android:id="@+id/etPay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_rupee1"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:padding="15dp"
-        android:background="@drawable/bg7"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Payment Options"
-        android:textColor="#000"
-        android:layout_margin="20dp"
-        android:textSize="15dp"/>
-
-    <LinearLayout
+        android:background="@drawable/bg7"
+        android:drawableStart="@drawable/ic_rupee1"
+        android:padding="15dp" />
+    <com.google.android.material.slider.Slider
+        android:id="@+id/priceslider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        android:valueFrom="0.0"
+        android:stepSize="50"
+        android:valueTo="10000.0"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gold Pay"
-        android:background="@drawable/bggreen"
-        android:paddingStart="30dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="30dp"
-        android:paddingBottom="10dp"
-        android:textColor="#FFFFFF"
-        android:layout_marginStart="30dp"
-        android:textSize="15dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Payment Options"
+        android:textColor="#000"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal">
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Boss Pay"
-            android:paddingStart="30dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="30dp"
-            android:paddingBottom="10dp"
-            android:background="@drawable/bgash"
-            android:textColor="#FFFFFF"
-            android:layout_marginStart="50dp"
-            android:textSize="15dp"/>
+            app:selectionRequired="true"
+            app:singleSelection="true">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/goldpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:checked="true"
+                android:text="Gold Pay"
+                app:checkedIconEnabled="false"
+                app:checkedIcon="@null"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/level2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:clickable="true"
+                android:textAlignment="center"
+                app:checkedIconEnabled="false"
+                app:checkedIcon="@null"
+                android:focusable="true"
+                android:text="Boss Pay"
+                app:chipBackgroundColor="@color/bg_chip_state_list"
+                />
 
+        </com.google.android.material.chip.ChipGroup>
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/paybtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Pay"
+        android:layout_margin="20dp"
+        android:textAllCaps="false"/>
 
 
 </LinearLayout>

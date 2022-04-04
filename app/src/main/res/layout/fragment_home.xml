@@ -59,9 +59,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:id="@+id/recharge_layout"
             android:padding="10dp"
             android:background="@drawable/bgwhitecorner">
@@ -120,154 +120,228 @@
 
 
         </RelativeLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:id="@+id/withdrawal_layout"
-            android:layout_marginEnd="30dp"
+            android:padding="10dp"
             android:background="@drawable/bgwhitecorner">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Withdrawal"
-                android:textSize="20dp"
-                android:id="@+id/drawal_txt"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="#000"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/moneyicon" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Take Your Money"
-                android:textSize="15dp"
-                android:layout_marginStart="10dp"
-                android:layout_below="@+id/drawal_txt" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Withdrawal"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Take Your Money"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
-                android:layout_alignParentRight="true"
-                android:layout_margin="20dp"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:id="@+id/miner_layout"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/bgwhitecorner">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Miner"
-                android:textSize="20dp"
-                android:id="@+id/miner_txt"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="#000"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Your Statistics Of Account"
-                android:textSize="15dp"
-                android:layout_marginStart="10dp"
-                android:layout_below="@+id/miner_txt" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
-                android:layout_alignParentRight="true"
-                android:layout_margin="20dp"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/news_layout"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/bgwhitecorner">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="News"
-                android:textSize="20dp"
-                android:id="@+id/news_txt"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="#000"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Updated Our News"
-                android:textSize="15dp"
-                android:layout_marginStart="10dp"
-                android:layout_below="@+id/news_txt" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
-        </RelativeLayout>
 
+
+        </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/miner_layout"
+            android:padding="10dp"
             android:background="@drawable/bgwhitecorner">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Activity"
-                android:textSize="20dp"
-                android:id="@+id/activity_txt"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="#000"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/minor_icon" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Explore the Section"
-                android:textSize="15dp"
-                android:layout_marginStart="10dp"
-                android:layout_below="@+id/activity_txt" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="My Miner"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Your Statistics Of Account"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
-                android:layout_alignParentRight="true"
-                android:layout_margin="20dp"/>
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/news_layout"
+            android:padding="10dp"
+            android:background="@drawable/bgwhitecorner">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/news_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="News"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Updated Our News"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/activity_layout"
+            android:padding="10dp"
+            android:background="@drawable/bgwhitecorner">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/activity_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Activity"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Explore the Section"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
 
         </RelativeLayout>
 

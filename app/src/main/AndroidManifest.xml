@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EarningApp">
         <activity
-            android:name=".NewsActivity"
+            android:name=".MinorActivity"
             android:exported="false" />
         <activity
             android:name=".WithdrawalActivity"
@@ -19,7 +19,7 @@
             android:name=".RechargeActivity"
             android:exported="false" />
         <activity
-            android:name=".MinorActivity"
+            android:name=".Recharge2Activity"
             android:exported="false" />
         <activity
             android:name=".Recharge_History_Activity"
