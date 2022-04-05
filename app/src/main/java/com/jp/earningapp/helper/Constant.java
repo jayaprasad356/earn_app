@@ -1,7 +1,8 @@
 package com.jp.earningapp.helper;
 
 public class Constant {
-   public static final String MainBaseUrl = "http://192.168.43.38/earnapp/";
+   //public static final String MainBaseUrl = "http://192.168.43.38/earnapp/";
+   public static final String MainBaseUrl = "http://earnapp.greymatterworks.in/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String SIGNUP_USER_URL = BaseUrl + "signup_user.php";
     public static final String CHECK_MOBILE_NUMBER_URL = BaseUrl + "checkmobilenumber.php";
