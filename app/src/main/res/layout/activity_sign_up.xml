@@ -29,16 +29,16 @@
         android:layout_marginTop="100dp"/>
 
     <EditText
-        android:id="@+id/name_et"
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nametxt"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:maxLength="14"
         android:background="@drawable/bg1"
         android:hint="Name"
+        android:maxLength="14"
         android:padding="10dp" />
 
     <TextView
@@ -48,23 +48,23 @@
         android:textColor="#000"
         android:textSize="15dp"
         android:id="@+id/numbertxt"
-        android:layout_below="@id/name_et"
+        android:layout_below="@id/etName"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"/>
 
     <EditText
+        android:id="@+id/etMobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/numbertxt"
-        android:id="@+id/number_et"
-        android:hint="Mobile Number"
-        android:maxLength="10"
-        android:inputType="number"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg1"
-        android:padding="10dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg1"
+        android:hint="Mobile Number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,23 +73,23 @@
         android:textColor="#000"
         android:textSize="15dp"
         android:id="@+id/codetxt"
-        android:layout_below="@id/number_et"
+        android:layout_below="@id/etMobile"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"/>
 
     <EditText
+        android:id="@+id/etReferral"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/codetxt"
-        android:id="@+id/code_et"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg1"
+        android:hint="Code"
         android:inputType="number"
         android:maxLength="6"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg1"
-        android:padding="10dp"
-        android:hint="Code"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:padding="10dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -99,7 +99,7 @@
         android:id="@+id/signup_btn"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_below="@+id/code_et"
+        android:layout_below="@+id/etReferral"
         android:layout_marginTop="30dp"/>
 
     <TextView

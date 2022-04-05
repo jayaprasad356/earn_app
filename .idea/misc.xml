@@ -33,11 +33,13 @@
         <entry key="..\:/Studio Projects/EarningApp/app/src/main/res/layout/fragment_team.xml" value="0.22" />
         <entry key="..\:/Studio Projects/EarningApp/app/src/main/res/layout/post_lyt.xml" value="0.4466666666666667" />
         <entry key="..\:/Studio Projects/EarningApp/app/src/main/res/menu/menu.xml" value="0.17552083333333332" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/custom_progress_dialog.xml" value="0.1675" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.184" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/ic_red_circle.xml" value="0.184" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_minor.xml" value="0.17552083333333332" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_otp.xml" value="0.17552083333333332" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_recharge.xml" value="0.17552083333333332" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_sign_up.xml" value="0.17552083333333332" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_transaction_details.xml" value="0.17552083333333332" />

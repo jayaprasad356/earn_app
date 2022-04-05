@@ -40,7 +40,7 @@
             android:textSize="15dp" />
 
         <EditText
-            android:id="@+id/mobileet"
+            android:id="@+id/etMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -51,11 +51,11 @@
             android:padding="15dp" />
 
         <Button
-            android:id="@+id/sendbtn"
+            android:id="@+id/btnSendOtp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Send Otp"
+            android:text="@string/send_otp"
             android:textAllCaps="false" />
 
         <TextView
