@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -13,6 +14,8 @@ import com.jp.earningapp.fragment.HomeFragment;
 import com.jp.earningapp.fragment.ProfileFragment;
 import com.jp.earningapp.fragment.ShopFragment;
 import com.jp.earningapp.fragment.TeamFragment;
+import com.jp.earningapp.helper.Constant;
+import com.jp.earningapp.helper.Session;
 
 public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
     HomeFragment homeFragment;
@@ -21,11 +24,15 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     CallUsFragment callUsFragment;
     ProfileFragment profileFragment;
     BottomNavigationView bottomNavigationView;
+    Session session;
+    TextView userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        session = new Session(MainActivity.this);
+        userName = findViewById(R.id.userName);
         homeFragment = new HomeFragment();
         shopFragment = new ShopFragment();
         teamFragment = new TeamFragment();
@@ -34,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment,"HOME").commit();
+
+        userName.setText(session.getData(Constant.NAME));
 
     }
 

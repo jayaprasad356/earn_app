@@ -18,6 +18,7 @@
             android:textSize="16dp"
             android:text="Hi,"/>
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
@@ -28,10 +29,10 @@
 
     <FrameLayout
         android:id="@+id/container"
-        android:layout_below="@+id/l1"
-        android:layout_above="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_below="@+id/l1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

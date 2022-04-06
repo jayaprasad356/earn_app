@@ -15,24 +15,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mulishregular"
+                android:id="@+id/friendtxt"
                 android:layout_weight="3"
+                android:layout_marginStart="10dp"
                 android:textSize="10dp"
                 android:text="@string/refer_instructions"/>
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mulishregular"
                 android:textSize="15dp"
                 android:layout_margin="3dp"
-                android:layout_gravity="center"
+                android:padding="10dp"
+                android:drawablePadding="30dp"
+                android:drawableEnd="@drawable/ic_copy"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Code : 40404"/>
+                android:id="@+id/code_txt"
+                android:text="40404"/>
+
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"

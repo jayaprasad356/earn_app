@@ -15,6 +15,7 @@ public class Constant {
     public static final String MOBILE = "mobile";
     public static final String REFERRAL = "referral";
     public static final String NAME = "name";
+    public static final String MY_REFER_CODE = "my_refer_code";
     public static final String TYPE = "type";
     public static final String DESCRIPION = "description";
     public static final String ROLE = "role";

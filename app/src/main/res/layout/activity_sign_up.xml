@@ -87,8 +87,6 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/bg1"
         android:hint="Code"
-        android:inputType="number"
-        android:maxLength="6"
         android:padding="10dp" />
 
     <Button

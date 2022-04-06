@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,9 @@ import android.widget.Toast;
 
 import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
+import com.jp.earningapp.helper.Session;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,11 +29,14 @@ public class LoginActivity extends AppCompatActivity {
     EditText etMobile;
     Button btnSendOtp;
     Activity activity;
+    Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        session = new Session(LoginActivity.this);
+
         tvsignup = findViewById(R.id.tvsignup);
         btnSendOtp = findViewById(R.id.btnSendOtp);
         etMobile = findViewById(R.id.etMobile);
@@ -65,10 +71,15 @@ public class LoginActivity extends AppCompatActivity {
         Map<String, String> params = new HashMap<>();
         params.put(Constant.MOBILE,etMobile.getText().toString().trim());
         ApiConfig.RequestToVolley((result, response) -> {
+            Log.d("LOGINACTIVITYMOBILE",""+response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
+
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        session.setData(Constant.NAME,jsonArray.getJSONObject(0).getString(Constant.NAME));
+                        session.setData(Constant.MY_REFER_CODE,jsonArray.getJSONObject(0).getString(Constant.MY_REFER_CODE));
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(activity,OtpActivity.class);
                         intent.putExtra(Constant.MOBILE,etMobile.getText().toString().trim());
