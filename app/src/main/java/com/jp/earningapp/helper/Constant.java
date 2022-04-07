@@ -6,6 +6,7 @@ public class Constant {
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String SIGNUP_USER_URL = BaseUrl + "signup_user.php";
     public static final String CHECK_MOBILE_NUMBER_URL = BaseUrl + "checkmobilenumber.php";
+    public static final String REFER_DETAILS_URL = BaseUrl + "getreferraldetails.php";
 
     public static final String WebSiteUrl = ""; //Admin panel url
     public static final String ID = "id";
@@ -29,4 +30,5 @@ public class Constant {
     public static final String SUCCESS = "success";
  public static final String MESSAGE = "message";
 
+    public static final String LEVEL = "level";
 }
