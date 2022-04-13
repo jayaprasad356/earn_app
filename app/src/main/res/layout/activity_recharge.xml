@@ -8,10 +8,11 @@
     tools:context=".RechargeActivity">
 
     <TextView
+        android:id="@+id/tvBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="My Balance Rs. 2500"
+        android:text=""
         android:textColor="#B1B1B1"
         android:textSize="18dp" />
 
@@ -51,7 +52,7 @@
             app:selectionRequired="true"
             app:singleSelection="true">
             <com.google.android.material.chip.Chip
-                android:id="@+id/goldpay"
+                android:id="@+id/paytm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -59,13 +60,13 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:checked="true"
-                android:text="Gold Pay"
+                android:text="Pay TM"
                 app:checkedIconEnabled="false"
                 app:checkedIcon="@null"
                 app:chipBackgroundColor="@color/bg_chip_state_list"
                 />
             <com.google.android.material.chip.Chip
-                android:id="@+id/level2"
+                android:id="@+id/upi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkable="true"
@@ -74,7 +75,7 @@
                 app:checkedIconEnabled="false"
                 app:checkedIcon="@null"
                 android:focusable="true"
-                android:text="Boss Pay"
+                android:text="UPI"
                 app:chipBackgroundColor="@color/bg_chip_state_list"
                 />
 

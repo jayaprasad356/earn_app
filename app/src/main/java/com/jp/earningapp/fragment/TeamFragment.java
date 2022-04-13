@@ -4,24 +4,23 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.chip.Chip;
 import com.google.gson.Gson;
-import com.jp.earningapp.LoginActivity;
 import com.jp.earningapp.R;
-import com.jp.earningapp.TransactionDetailsActivity;
 import com.jp.earningapp.adapter.TeamAdapter;
 import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
@@ -44,6 +43,8 @@ public class TeamFragment extends Fragment {
     public static TeamAdapter teamAdapter;
     View rootview;
     Activity activity;
+    Chip Level1,Level2,Level3;
+    ArrayList<Team> teams = new ArrayList<>();
 
 
     public TeamFragment() {
@@ -59,7 +60,11 @@ public class TeamFragment extends Fragment {
         recyclerView = rootview.findViewById(R.id.recyclerView);
 
         code_txt = rootview.findViewById(R.id.code_txt);
+        Level1 = rootview.findViewById(R.id.level1);
+        Level2 = rootview.findViewById(R.id.level2);
+        Level3 = rootview.findViewById(R.id.level3);
         session = new Session(getActivity());
+        teamAdapter = new TeamAdapter(activity, teams);
 
 
         code_txt.setText(session.getData(Constant.MY_REFER_CODE));
@@ -79,17 +84,43 @@ public class TeamFragment extends Fragment {
                 Toast.makeText(getActivity(), "Copied", Toast.LENGTH_SHORT).show();
             }
         });
-        teamList();
+        Level1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    teamList("1");
+                }
+            }
+        });
+        Level2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    teamList("2");
+                }
+            }
+        });
+        Level3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    teamList("3");
+                }
+            }
+        });
+        teamList("1");
 
 
 
         return rootview;
     }
 
-    private void teamList()
+    private void teamList(String s)
     {
+        teams.clear();
+        teamAdapter.notifyDataSetChanged();
         Map<String, String> params = new HashMap<>();
-        params.put(Constant.LEVEL, "1");
+        params.put(Constant.LEVEL, s);
         params.put(Constant.REFERRAL, session.getData(Constant.MY_REFER_CODE));
         ApiConfig.RequestToVolley((result, response) -> {
             if (result) {
@@ -99,29 +130,26 @@ public class TeamFragment extends Fragment {
                         JSONObject object = new JSONObject(response);
                         JSONArray jsonArray = object.getJSONArray(Constant.DATA);
                         Gson g = new Gson();
-                        ArrayList<Team> posts = new ArrayList<>();
-
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-
                             if (jsonObject1 != null) {
                                 Team group = g.fromJson(jsonObject1.toString(), Team.class);
-                                posts.add(group);
+                                teams.add(group);
                             } else {
                                 break;
                             }
                         }
 
-                        teamAdapter = new TeamAdapter(activity, posts);
+
                         recyclerView.setAdapter(teamAdapter);
                     }
                     else {
-                        Toast.makeText(getActivity(), ""+String.valueOf(jsonObject.getString(Constant.MESSAGE)), Toast.LENGTH_SHORT).show();
+                        Log.d("TEAM_RESPONSE",""+jsonObject.getString(Constant.MESSAGE));
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(getActivity(), String.valueOf(e), Toast.LENGTH_SHORT).show();
+                    Log.d("TEAM_RESPONSE",""+e.getMessage());
                 }
             }
         }, activity, Constant.REFER_DETAILS_URL, params, true);

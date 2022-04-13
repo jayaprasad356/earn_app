@@ -26,7 +26,7 @@ public class ProfileFragment extends Fragment {
 
     RelativeLayout relayout_1,withdrawal_layout,miner_layout,recharge_layout;
     Session session;
-    TextView nadila_txt;
+    TextView nadila_txt,tvBalance;
 
 
     public ProfileFragment() {
@@ -40,6 +40,7 @@ public class ProfileFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_profile, container, false);
 
         relayout_1 = rootview.findViewById(R.id.relayout_1);
+        tvBalance = rootview.findViewById(R.id.tvBalance);
         session = new Session(getActivity());
         recharge_layout = rootview.findViewById(R.id.recharge_layout);
         withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
@@ -47,6 +48,7 @@ public class ProfileFragment extends Fragment {
         nadila_txt = rootview.findViewById(R.id.nadila_txt);
 
         nadila_txt.setText(session.getData(Constant.NAME));
+        tvBalance.setText(session.getData(Constant.BALANCE));
 
         withdrawal_layout.setOnClickListener(new View.OnClickListener() {
             @Override

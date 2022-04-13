@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                     JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
 
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        session.setData(Constant.ID,jsonArray.getJSONObject(0).getString(Constant.ID));
                         session.setData(Constant.NAME,jsonArray.getJSONObject(0).getString(Constant.NAME));
                         session.setData(Constant.MY_REFER_CODE,jsonArray.getJSONObject(0).getString(Constant.MY_REFER_CODE));
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();

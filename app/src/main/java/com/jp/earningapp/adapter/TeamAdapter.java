@@ -55,8 +55,11 @@ public class TeamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holderParent, int position) {
         final ItemHolder holder = (ItemHolder) holderParent;
         final Team team = teams.get(position);
+        String s1 = team.getMobile().substring(0,2);
+        String s2 = team.getMobile().substring(8,10);
 
-        holder.mobile.setText(team.getMobile());
+        holder.tvName.setText(team.getName());
+        holder.mobile.setText(s1+"******"+s2);
 
 
     }
@@ -69,11 +72,12 @@ public class TeamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     static class ItemHolder extends RecyclerView.ViewHolder {
 
-        final TextView mobile;
+        final TextView tvName,mobile;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
             mobile = itemView.findViewById(R.id.tvMobile);
+            tvName = itemView.findViewById(R.id.tvName);
         }
     }
 }

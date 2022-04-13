@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.jp.earningapp.Recharge2Activity;
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
@@ -75,4 +74,5 @@ public class HomeFragment extends Fragment {
 
         return rootview;
     }
+
 }

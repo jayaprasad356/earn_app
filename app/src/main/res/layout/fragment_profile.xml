@@ -87,7 +87,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/ten_txt"
+                        android:id="@+id/tvBalance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/your_txt"
@@ -98,7 +98,7 @@
                         android:drawableStart="@drawable/ic_rupee"
                         android:text="10"
                         android:textColor="#FFFF"
-                        android:textSize="35dp"
+                        android:textSize="20dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>

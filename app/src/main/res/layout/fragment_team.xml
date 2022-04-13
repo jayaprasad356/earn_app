@@ -61,6 +61,7 @@
                     android:checkable="true"
                     android:clickable="true"
                     android:focusable="true"
+                    android:checked="true"
                     android:text="Level 1"
                     app:checkedIconEnabled="false"
                     app:checkedIcon="@null"

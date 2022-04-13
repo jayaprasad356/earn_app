@@ -64,9 +64,6 @@
             android:name=".RechargeActivity"
             android:exported="false" />
         <activity
-            android:name=".Recharge2Activity"
-            android:exported="false" />
-        <activity
             android:name=".Recharge_History_Activity"
             android:exported="false" />
         <activity
