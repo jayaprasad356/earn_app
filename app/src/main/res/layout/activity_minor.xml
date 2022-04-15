@@ -24,6 +24,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvPurchasedPlans"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -33,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Equipment Amount"
+                android:text="Purchased Plan"
                 android:textColor="#E61C1C"
                 android:textSize="8dp" />
 
@@ -50,6 +51,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvTodayProfit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -59,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income Today"
+                android:text="Today Profit"
                 android:textColor="#7047CF"
                 android:textSize="8dp" />
 
@@ -76,17 +78,18 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvTotalProfit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textColor="#490CD8"
+                android:textColor="#FF9800"
                 android:textSize="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income Today"
-                android:textColor="#4B08E6"
+                android:text="Total Profit"
+                android:textColor="#FF9800"
                 android:textSize="8dp" />
 
         </LinearLayout>

@@ -1,10 +1,12 @@
 package com.jp.earningapp.fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +20,15 @@ import com.jp.earningapp.Recharge_History_Activity;
 import com.jp.earningapp.TransactionDetailsActivity;
 import com.jp.earningapp.UPI_Information_Activity;
 import com.jp.earningapp.WithdrawalActivity;
+import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
 import com.jp.earningapp.helper.Session;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class ProfileFragment extends Fragment {
@@ -27,6 +36,9 @@ public class ProfileFragment extends Fragment {
     RelativeLayout relayout_1,withdrawal_layout,miner_layout,recharge_layout;
     Session session;
     TextView nadila_txt,tvBalance;
+    TextView tvPurchasedPlans,tvTodayProfit,tvTotalProfit,tvTodayProfit2;
+    View rootview;
+    Activity activity;
 
 
     public ProfileFragment() {
@@ -37,15 +49,22 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootview = inflater.inflate(R.layout.fragment_profile, container, false);
+        rootview = inflater.inflate(R.layout.fragment_profile, container, false);
 
         relayout_1 = rootview.findViewById(R.id.relayout_1);
         tvBalance = rootview.findViewById(R.id.tvBalance);
+        activity = getActivity();
         session = new Session(getActivity());
+
         recharge_layout = rootview.findViewById(R.id.recharge_layout);
         withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
         miner_layout = rootview.findViewById(R.id.miner_layout);
         nadila_txt = rootview.findViewById(R.id.nadila_txt);
+
+        tvPurchasedPlans = rootview.findViewById(R.id.tvPurchasedPlans);
+        tvTodayProfit = rootview.findViewById(R.id.tvTodayProfit);
+        tvTotalProfit = rootview.findViewById(R.id.tvTotalProfit);
+        tvTodayProfit2 = rootview.findViewById(R.id.tvTodayProfit2);
 
         nadila_txt.setText(session.getData(Constant.NAME));
         tvBalance.setText(session.getData(Constant.BALANCE));
@@ -82,8 +101,38 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        minorDetails();
 
         return rootview;
+    }
+    private void minorDetails()
+    {
+        Map<String, String> params = new HashMap<>();
+        params.put(Constant.USER_ID,session.getData(Constant.ID));
+        ApiConfig.RequestToVolley((result, response) -> {
+
+            if (result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        tvPurchasedPlans.setText(jsonObject.getString(Constant.PURCHASED_PLANS));
+                        tvTodayProfit.setText(jsonObject.getString(Constant.TODAY_PROFIT));
+                        tvTotalProfit.setText(jsonObject.getString(Constant.TOTAL_PROFIT));
+                        tvTodayProfit2.setText(jsonObject.getString(Constant.TODAY_PROFIT));
+                    }
+                    else {
+                        Log.d("MAINACTIVITY",jsonObject.getString(Constant.MESSAGE));
+
+                    }
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+
+        }, activity, Constant.MINER_URL, params,true);
+
+
     }
 
 }

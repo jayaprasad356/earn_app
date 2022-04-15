@@ -9,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
 import com.jp.earningapp.WithdrawalActivity;
+import com.jp.earningapp.helper.Constant;
+import com.jp.earningapp.helper.Session;
 
 public class HomeFragment extends Fragment {
 
@@ -21,6 +24,8 @@ public class HomeFragment extends Fragment {
     RelativeLayout recharge_layout;
     RelativeLayout withdrawal_layout;
     RelativeLayout news_layout;
+    TextView tvEarn,tvRecharge;
+    Session session;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -37,9 +42,11 @@ public class HomeFragment extends Fragment {
         recharge_layout = rootview.findViewById(R.id.recharge_layout);
         withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
         news_layout = rootview.findViewById(R.id.news_layout);
+        tvEarn = rootview.findViewById(R.id.tvEarn);
+        tvRecharge = rootview.findViewById(R.id.tvRecharge);
+        session = new Session(getActivity());
 
-
-
+        tvEarn.setText(session.getData(Constant.EARN));
         miner_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +56,13 @@ public class HomeFragment extends Fragment {
         });
 
         recharge_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), RechargeActivity.class);
+                startActivity(intent);
+            }
+        });
+        tvRecharge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RechargeActivity.class);

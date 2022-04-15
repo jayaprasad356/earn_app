@@ -64,14 +64,14 @@
                         android:textSize="18dp" />
 
                     <TextView
-                        android:id="@+id/number_txt"
+                        android:id="@+id/tvTodayProfit2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/your_txt"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="5dp"
                         android:drawableStart="@drawable/ic_rupee"
-                        android:text="2"
+                        android:text="0"
                         android:textColor="#FFFF"
                         android:textSize="20dp" />
 
@@ -102,7 +102,6 @@
                         android:textStyle="bold" />
 
                 </RelativeLayout>
-
                 <LinearLayout
                     android:id="@+id/linear_2"
                     android:layout_width="match_parent"
@@ -121,6 +120,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvPurchasedPlans"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -130,7 +130,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total Machines"
+                            android:text="Purchased Plan"
                             android:textColor="#E61C1C"
                             android:textSize="8dp" />
 
@@ -147,6 +147,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvTodayProfit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -156,7 +157,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Active Machines"
+                            android:text="Today Profit"
                             android:textColor="#7047CF"
                             android:textSize="8dp" />
 
@@ -173,22 +174,25 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvTotalProfit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textColor="#490CD8"
+                            android:textColor="#FF9800"
                             android:textSize="15dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total Profits"
-                            android:textColor="#4B08E6"
+                            android:text="Total Profit"
+                            android:textColor="#FF9800"
                             android:textSize="8dp" />
 
                     </LinearLayout>
 
                 </LinearLayout>
+
+
 
                 <TextView
                     android:id="@+id/common_txt"
@@ -470,6 +474,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:id="@+id/profit_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -480,6 +485,7 @@
                     android:padding="10dp">
 
                     <RelativeLayout
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">

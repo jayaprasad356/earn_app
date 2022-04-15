@@ -71,7 +71,6 @@ public class LoginActivity extends AppCompatActivity {
         Map<String, String> params = new HashMap<>();
         params.put(Constant.MOBILE,etMobile.getText().toString().trim());
         ApiConfig.RequestToVolley((result, response) -> {
-            Log.d("LOGINACTIVITYMOBILE",""+response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
@@ -81,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         session.setData(Constant.ID,jsonArray.getJSONObject(0).getString(Constant.ID));
                         session.setData(Constant.NAME,jsonArray.getJSONObject(0).getString(Constant.NAME));
                         session.setData(Constant.MY_REFER_CODE,jsonArray.getJSONObject(0).getString(Constant.MY_REFER_CODE));
+                        session.setData(Constant.EARN,jsonArray.getJSONObject(0).getString(Constant.EARN));
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(activity,OtpActivity.class);
                         intent.putExtra(Constant.MOBILE,etMobile.getText().toString().trim());

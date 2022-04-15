@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     ProfileFragment profileFragment;
     BottomNavigationView bottomNavigationView;
     Session session;
-    TextView userName;
     Activity activity;
 
     @Override
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         session = new Session(MainActivity.this);
-        userName = findViewById(R.id.userName);
         activity = MainActivity.this;
         homeFragment = new HomeFragment();
         shopFragment = new ShopFragment();
@@ -55,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment,"HOME").commit();
-        userName.setText(session.getData(Constant.NAME));
 
     }
 
@@ -92,10 +89,37 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     protected void onStart() {
         super.onStart();
         getUserDetails();
+
+    }
+
+    private void getDailyIncome() {
+        Map<String, String> params = new HashMap<>();
+        params.put(Constant.USER_ID,session.getData(Constant.ID));
+        ApiConfig.RequestToVolley((result, response) -> {
+            if (result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
+
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        session.setData(Constant.BALANCE,jsonArray.getJSONObject(0).getString(Constant.BALANCE));
+                    }
+                    else {
+                        Log.d("MAINACTIVITY",jsonObject.getString(Constant.MESSAGE));
+
+                    }
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+
+        }, activity, Constant.DAILY_INCOME_URL, params,true);
+
     }
 
     private void getUserDetails()
     {
+        getDailyIncome();
         Map<String, String> params = new HashMap<>();
         params.put(Constant.USER_ID,session.getData(Constant.ID));
         ApiConfig.RequestToVolley((result, response) -> {

@@ -88,6 +88,8 @@ public class RechargeActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        Intent intent = new Intent(activity, MainActivity.class);
+                        startActivity(intent);
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
                     }
                     else {
