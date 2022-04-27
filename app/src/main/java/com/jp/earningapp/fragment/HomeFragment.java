@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jp.earningapp.BonusActivity;
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
@@ -23,6 +24,7 @@ public class HomeFragment extends Fragment {
     RelativeLayout miner_layout;
     RelativeLayout recharge_layout;
     RelativeLayout withdrawal_layout;
+    RelativeLayout activity_layout;
     RelativeLayout news_layout;
     TextView tvEarn,tvRecharge;
     Session session;
@@ -42,6 +44,7 @@ public class HomeFragment extends Fragment {
         recharge_layout = rootview.findViewById(R.id.recharge_layout);
         withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
         news_layout = rootview.findViewById(R.id.news_layout);
+        activity_layout = rootview.findViewById(R.id.activity_layout);
         tvEarn = rootview.findViewById(R.id.tvEarn);
         tvRecharge = rootview.findViewById(R.id.tvRecharge);
         session = new Session(getActivity());
@@ -74,6 +77,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), WithdrawalActivity.class);
+                startActivity(intent);
+            }
+        });
+        activity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BonusActivity.class);
                 startActivity(intent);
             }
         });

@@ -298,7 +298,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:id="@+id/activity_layout"
-            android:visibility="gone"
             android:padding="10dp"
             android:background="@drawable/bgwhitecorner">
             <LinearLayout

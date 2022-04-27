@@ -2,6 +2,7 @@ package com.jp.earningapp.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.jp.earningapp.R;
 import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
@@ -52,6 +54,8 @@ public class PlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holderParent, int position) {
         final ItemHolder holder = (ItemHolder) holderParent;
         final Plan plan = plans.get(position);
+        holder.tvPlanname.setText(plan.getName());
+        Glide.with(activity).load(plan.getImage()).into(holder.imgPlan);
 
         holder.daily_income.setText("₹ "+plan.getDaily_income());
         holder.plan_price.setText("₹ "+plan.getPrice());
@@ -109,6 +113,8 @@ public class PlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         final TextView daily_income,plan_price,validation;
         Button Purchase;
+        ImageView imgPlan;
+        TextView tvPlanname;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
@@ -116,6 +122,8 @@ public class PlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             plan_price = itemView.findViewById(R.id.plan_price);
             validation = itemView.findViewById(R.id.validation);
             Purchase = itemView.findViewById(R.id.purchase);
+            tvPlanname = itemView.findViewById(R.id.tvPlanname);
+            imgPlan = itemView.findViewById(R.id.imgPlan);
 
 
 

@@ -114,6 +114,7 @@
                 android:background="@drawable/bg3">
 
                 <TextView
+                    android:id="@+id/team_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -140,6 +141,7 @@
                 android:background="@drawable/bg4">
 
                 <TextView
+                    android:id="@+id/total_contribution"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -211,12 +213,13 @@
             android:background="#000000" />
 
     </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/r2"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/team_lyt"/>
+        android:layout_below="@+id/r2"
+        tools:listitem="@layout/team_lyt" />
 
 
 

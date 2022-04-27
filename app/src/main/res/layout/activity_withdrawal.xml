@@ -7,24 +7,17 @@
     android:orientation="vertical"
     tools:context=".WithdrawalActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="UPI : test@okokbank.in"
-        android:textColor="#101010"
-        android:textSize="18dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="My Balance Rs. 2500"
+        android:text="Earning Rs. 2500"
         android:textColor="#B1B1B1"
         android:textSize="18dp" />
 
     <EditText
+        android:id="@+id/etWithdrawal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -36,6 +29,7 @@
 
 
     <Button
+        android:id="@+id/btnWithdrawal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Withdrawal"
@@ -47,6 +41,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_margin="10dp"
+        android:visibility="gone"
         android:text="INCLUDES OF 5% GST MONDAY TO SUNDAY 10:00-17:00,WITHDRAWAL WILL ARRIVE WITHIN 24 HOURS,MINIMUM IS 110 RS"
         android:textSize="10dp" />
 

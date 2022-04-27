@@ -1,13 +1,15 @@
 package com.jp.earningapp.model;
 
 public class Plan {
-    String id,daily_income,price,valid;
+    String id,name,image,daily_income,price,valid;
     public Plan(){
 
     }
 
-    public Plan(String id, String daily_income, String price, String valid) {
+    public Plan(String id, String name, String image, String daily_income, String price, String valid) {
         this.id = id;
+        this.name = name;
+        this.image = image;
         this.daily_income = daily_income;
         this.price = price;
         this.valid = valid;
@@ -19,6 +21,22 @@ public class Plan {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getDaily_income() {
