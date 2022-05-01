@@ -13,4 +13,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimary">@color/darkgreen</item>
+        <item name="colorPrimaryDark">@color/darkgreen</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor">@color/darkgreen</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
 </resources>

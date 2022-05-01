@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,15 +18,30 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.slider.Slider;
 import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
+import com.jp.earningapp.helper.PaymentModelClass;
 import com.jp.earningapp.helper.Session;
+import com.payumoney.core.PayUmoneyConstants;
+import com.payumoney.core.PayUmoneySdkInitializer;
+import com.payumoney.sdkui.ui.utils.PayUmoneyFlowManager;
+import com.shreyaspatil.EasyUpiPayment.EasyUpiPayment;
+import com.shreyaspatil.EasyUpiPayment.listener.PaymentStatusListener;
+import com.shreyaspatil.EasyUpiPayment.model.PaymentApp;
+import com.shreyaspatil.EasyUpiPayment.model.TransactionDetails;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
-public class RechargeActivity extends AppCompatActivity {
+public class RechargeActivity extends AppCompatActivity implements PaymentStatusListener {
     Slider priceslider;
     EditText etPay;
     Button paybtn;
@@ -34,6 +50,7 @@ public class RechargeActivity extends AppCompatActivity {
     Session session;
     Chip paytm,upi;
     TextView tvBalance;
+    String UPI_ID = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,17 +80,202 @@ public class RechargeActivity extends AppCompatActivity {
                     Toast.makeText(RechargeActivity.this, "Enter Recharge Amount", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    rechargeAmount();
+                    Map<String, String> params = new HashMap<>();
+                    params.put(Constant.AMOUNT,etPay.getText().toString().trim());
+                    ApiConfig.RequestToVolley((result, response) -> {
+                        if (result) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                                    if(paytm.isChecked()){
+                                        launchPayUMoneyFlow(Double.parseDouble("50"));
+//                        Constant.PAYUMONEY = "0";
+//                        Constant.PAYUMONEY_MODE = "sandbox";
+//                        Constant.MERCHANT_KEY = "FGCWtd8L";
+//                        Constant.MERCHANT_ID = "6934786";
+//                        Constant.MERCHANT_SALT = "40QIgAPghj";
+//                        ApiConfig.SetAppEnvironment(activity);
+//                        Toast.makeText(activity, "Pay U Money", Toast.LENGTH_SHORT).show();
+//                        new PaymentModelClass(activity).OnPayClick(activity, Constant.PAYMENT, "10");
+                                    }
+                                    else if(upi.isChecked()){
+                                        Toast.makeText(activity, UPI_ID, Toast.LENGTH_SHORT).show();
+                                        if (!UPI_ID.equals("")){
+
+                                            try {
+                                                Date c = Calendar.getInstance().getTime();
+                                                SimpleDateFormat df = new SimpleDateFormat("ddMMyyyyHHmmss", Locale.getDefault());
+                                                String transcId = df.format(c);
+                                                makePayment(""+Double.parseDouble(etPay.getText().toString()), UPI_ID, session.getData(Constant.NAME), "recharge amount", transcId);
+
+
+                                            }catch (Exception e){
+                                                Log.d("PAYMENT_GATEWAY",e.getMessage());
+
+                                            }
+
+                                        }
+
+
+                                    }
+
+                                }
+                                else {
+                                    Toast.makeText(activity, jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+
+                                }
+                            } catch (JSONException e){
+                                e.printStackTrace();
+                            }
+                        }
+                        else {
+                            Toast.makeText(activity, String.valueOf(response) +String.valueOf(result), Toast.LENGTH_SHORT).show();
+
+                        }
+                        //pass url
+                    }, activity, Constant.CHECK_RECHARGE_URL, params,true);
+
+
+
                 }
             }
         });
+    }
+    private void launchPayUMoneyFlow(double amount) {
+        PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
+
+        String txnId = "0nf7" + System.currentTimeMillis();
+        // String txnId = "TXNID720431525261327973";
+        String phone = "7777777777";
+        String productName = "Sample Product";
+        String firstName = "loopwiki";
+        String email = "sample@sample.com";
+        String udf1 = "";
+        String udf2 = "";
+        String udf3 = "";
+        String udf4 = "";
+        String udf5 = "";
+
+        //AppEnvironment appEnvironment = ((BaseApplication) getApplication()).getAppEnvironment();
+        builder.setAmount(String.valueOf(amount))
+                .setTxnId(txnId)
+                .setPhone(phone)
+                .setProductName(productName)
+                .setFirstName(firstName)
+                .setEmail(email)
+                .setsUrl(getString(R.string.sUrl))
+                .setfUrl(getString(R.string.fUrl))
+                .setUdf1(udf1)
+                .setUdf2(udf2)
+                .setUdf3(udf3)
+                .setUdf4(udf4)
+                .setUdf5(udf5)
+                .setIsDebug(false)
+                .setKey(getString(R.string.MerchantKey))
+                .setMerchantId(getString(R.string.MerchantId));
+
+        try {
+            PayUmoneySdkInitializer.PaymentParam mPaymentParams = builder.build();
+
+            /*
+             * Hash should always be generated from your server side.
+             * */
+            //    generateHashFromServer(mPaymentParams);
+
+            /*            *//**
+             * Do not use below code when going live
+             * Below code is provided to generate hash from sdk.
+             * It is recommended to generate hash from server side only.
+             * */
+            mPaymentParams = calculateServerSideHashAndInitiatePayment1(mPaymentParams);
+
+            PayUmoneyFlowManager.startPayUMoneyFlow(mPaymentParams, RechargeActivity.this, R.style.AppTheme, false);
+
+        } catch (Exception e) {
+            // some exception occurred
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+    // Method to create hash
+    public static String hashCal(String str) {
+        byte[] hashseq = str.getBytes();
+        StringBuilder hexString = new StringBuilder();
+        try {
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-512");
+            algorithm.reset();
+            algorithm.update(hashseq);
+            byte messageDigest[] = algorithm.digest();
+            for (byte aMessageDigest : messageDigest) {
+                String hex = Integer.toHexString(0xFF & aMessageDigest);
+                if (hex.length() == 1) {
+                    hexString.append("0");
+                }
+                hexString.append(hex);
+            }
+        } catch (NoSuchAlgorithmException ignored) {
+        }
+        return hexString.toString();
+    }
+    private PayUmoneySdkInitializer.PaymentParam calculateServerSideHashAndInitiatePayment1(final PayUmoneySdkInitializer.PaymentParam paymentParam) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        HashMap<String, String> params = paymentParam.getParams();
+        stringBuilder.append(params.get(PayUmoneyConstants.KEY)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.TXNID)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.AMOUNT)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.PRODUCT_INFO)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.FIRSTNAME)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.EMAIL)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.UDF1)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.UDF2)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.UDF3)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.UDF4)).append("|");
+        stringBuilder.append(params.get(PayUmoneyConstants.UDF5)).append("||||||");
+
+        stringBuilder.append(R.string.MerchantSalt);
+
+        String hash = hashCal(stringBuilder.toString());
+        paymentParam.setMerchantHash(hash);
+
+        return paymentParam;
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Map<String, String> params = new HashMap<>();
+        ApiConfig.RequestToVolley((result, response) -> {
+            if (result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        UPI_ID = jsonArray.getJSONObject(0).getString(Constant.UPI_ID);
+
+                    }
+                    else {
+                        Toast.makeText(this, jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+
+                    }
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+            else {
+                Toast.makeText(this, String.valueOf(response) +String.valueOf(result), Toast.LENGTH_SHORT).show();
+
+            }
+            //pass url
+        }, activity, Constant.EARN_SETTINGS_URL, params,true);
+
     }
 
     private void rechargeAmount()
     {
         String type = "";
         if (paytm.isChecked()){
-            type = "paytm";
+            type = "payu";
 
         }
         else {
@@ -106,5 +308,69 @@ public class RechargeActivity extends AppCompatActivity {
             }
             //pass url
         }, activity, Constant.RECHARGE_URL, params,true);
+    }
+
+    @Override
+    public void onTransactionCompleted(TransactionDetails transactionDetails) {
+        rechargeAmount();
+
+    }
+
+    @Override
+    public void onTransactionSuccess() {
+        Toast.makeText(activity, "Transaction Success", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onTransactionSubmitted() {
+
+    }
+
+    @Override
+    public void onTransactionFailed() {
+
+        Toast.makeText(activity, "Transaction Failed", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    @Override
+    public void onTransactionCancelled() {
+        Toast.makeText(activity, "Transaction Cancelled", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    @Override
+    public void onAppNotFound() {
+
+    }
+    private void makePayment(String amount, String upi, String name, String desc, String transactionId) {
+        // on below line we are calling an easy payment method and passing
+        // all parameters to it such as upi id,name, description and others.
+        final EasyUpiPayment easyUpiPayment = new EasyUpiPayment.Builder()
+                .with(this)
+                // on below line we are adding upi id.
+                .setPayeeVpa(upi)
+                // on below line we are setting name to which we are making oayment.
+                .setPayeeName(name)
+                // on below line we are passing transaction id.
+                .setTransactionId(transactionId)
+                // on below line we are passing transaction ref id.
+                .setTransactionRefId(transactionId)
+                // on below line we are adding description to payment.
+                .setDescription(desc)
+                // on below line we are passing amount which is being paid.
+                .setAmount(amount)
+                // on below line we are calling a build method to build this ui.
+                .build();
+        // on below line we are calling a start
+        // payment method to start a payment.
+        easyUpiPayment.startPayment();
+
+        // on below line we are calling a set payment
+        // status listener method to call other payment methods.
+        easyUpiPayment.setPaymentStatusListener(this);
     }
 }

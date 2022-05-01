@@ -25,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     Button signup_btn;
     Activity activity;
-    EditText etName,etMobile,etReferral;
+    EditText etName,etMobile,etReferral,etUpi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etMobile = findViewById(R.id.etMobile);
         etReferral = findViewById(R.id.etReferral);
+        etUpi = findViewById(R.id.etUpi);
         activity = SignUpActivity.this;
 
         signup_btn.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,10 @@ public class SignUpActivity extends AppCompatActivity {
                 else if (etMobile.getText().toString().trim().equals("")){
                     etMobile.setError("Mobile Number is Empty");
                     etMobile.requestFocus();
+                }
+                else if (etUpi.getText().toString().trim().equals("")){
+                    etUpi.setError("UPI is Empty");
+                    etUpi.requestFocus();
                 }
                 else {
                     signUp();
@@ -62,18 +67,18 @@ public class SignUpActivity extends AppCompatActivity {
         params.put(Constant.MOBILE,etMobile.getText().toString().trim());
         params.put(Constant.NAME,etName.getText().toString().trim());
         params.put(Constant.REFERRAL,etReferral.getText().toString().trim());
+        params.put(Constant.UPI,etUpi.getText().toString().trim());
         ApiConfig.RequestToVolley((result, response) -> {
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
-
                         startActivity(new Intent(activity, LoginActivity.class));
                         finish();
                     }
                     else {
-                        Toast.makeText(this, "Failed"+jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
 
                     }
                 } catch (JSONException e){

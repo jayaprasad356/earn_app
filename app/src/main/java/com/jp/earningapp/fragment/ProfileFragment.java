@@ -20,6 +20,7 @@ import com.jp.earningapp.Recharge_History_Activity;
 import com.jp.earningapp.TransactionDetailsActivity;
 import com.jp.earningapp.UPI_Information_Activity;
 import com.jp.earningapp.WithdrawalActivity;
+import com.jp.earningapp.WithdrawalListActivity;
 import com.jp.earningapp.helper.ApiConfig;
 import com.jp.earningapp.helper.Constant;
 import com.jp.earningapp.helper.Session;
@@ -39,6 +40,7 @@ public class ProfileFragment extends Fragment {
     TextView tvPurchasedPlans,tvTodayProfit,tvTotalProfit,tvTodayProfit2;
     View rootview;
     Activity activity;
+    RelativeLayout logout;
 
 
     public ProfileFragment() {
@@ -53,6 +55,7 @@ public class ProfileFragment extends Fragment {
 
         relayout_1 = rootview.findViewById(R.id.relayout_1);
         tvBalance = rootview.findViewById(R.id.tvBalance);
+        logout = rootview.findViewById(R.id.logout);
         activity = getActivity();
         session = new Session(getActivity());
 
@@ -69,10 +72,17 @@ public class ProfileFragment extends Fragment {
         nadila_txt.setText(session.getData(Constant.NAME));
         tvBalance.setText(session.getData(Constant.BALANCE));
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.logoutUser(activity);
+            }
+        });
+
         withdrawal_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WithdrawalActivity.class);
+                Intent intent = new Intent(getActivity(), WithdrawalListActivity.class);
                 startActivity(intent);
 
             }

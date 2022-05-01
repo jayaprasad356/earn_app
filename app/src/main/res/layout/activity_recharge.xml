@@ -61,7 +61,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:checked="true"
-                android:text="Pay TM"
+                android:text="Pay U Money"
                 app:checkedIconEnabled="false"
                 app:checkedIcon="@null"
                 app:chipBackgroundColor="@color/bg_chip_state_list"

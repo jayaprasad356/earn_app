@@ -38,6 +38,7 @@ import java.util.Map;
 public class TeamFragment extends Fragment {
 
     TextView code_txt;
+    TextView team_size,total_contribution;
     Session session;
     public static RecyclerView recyclerView;
     public static TeamAdapter teamAdapter;
@@ -63,6 +64,8 @@ public class TeamFragment extends Fragment {
         Level1 = rootview.findViewById(R.id.level1);
         Level2 = rootview.findViewById(R.id.level2);
         Level3 = rootview.findViewById(R.id.level3);
+        total_contribution = rootview.findViewById(R.id.total_contribution);
+        team_size = rootview.findViewById(R.id.team_size);
         session = new Session(getActivity());
         teamAdapter = new TeamAdapter(activity, teams);
 
@@ -117,10 +120,13 @@ public class TeamFragment extends Fragment {
 
     private void teamList(String s)
     {
+        total_contribution.setText("0");
+        team_size.setText("0");
         teams.clear();
         teamAdapter.notifyDataSetChanged();
         Map<String, String> params = new HashMap<>();
         params.put(Constant.LEVEL, s);
+        params.put(Constant.USER_ID, session.getData(Constant.ID));
         params.put(Constant.REFERRAL, session.getData(Constant.MY_REFER_CODE));
         ApiConfig.RequestToVolley((result, response) -> {
             if (result) {
@@ -128,6 +134,9 @@ public class TeamFragment extends Fragment {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
                         JSONObject object = new JSONObject(response);
+
+                        total_contribution.setText(jsonObject.getString(Constant.TOTAL_CONTRIBUTION));
+                        team_size.setText(jsonObject.getString(Constant.TEAM_SIZE));
                         JSONArray jsonArray = object.getJSONArray(Constant.DATA);
                         Gson g = new Gson();
                         for (int i = 0; i < jsonArray.length(); i++) {

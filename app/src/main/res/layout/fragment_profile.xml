@@ -27,7 +27,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circularwhitebackground"
-                    android:backgroundTint="#000">
+                    android:backgroundTint="#4CAF50">
 
                 </RelativeLayout>
 
@@ -193,18 +193,22 @@
                 </LinearLayout>
 
 
-
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/common_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/linear_2"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="Common Module"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:id="@+id/relayout_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -257,6 +261,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:id="@+id/relayout_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -538,6 +543,7 @@
                     android:padding="10dp">
 
                     <RelativeLayout
+                        android:id="@+id/logout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -559,7 +565,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="8dp"
-                                android:text="Share invite"
+                                android:text="Logout"
                                 android:textColor="#000"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />

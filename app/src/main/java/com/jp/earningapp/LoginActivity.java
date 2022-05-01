@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                         session.setData(Constant.NAME,jsonArray.getJSONObject(0).getString(Constant.NAME));
                         session.setData(Constant.MY_REFER_CODE,jsonArray.getJSONObject(0).getString(Constant.MY_REFER_CODE));
                         session.setData(Constant.EARN,jsonArray.getJSONObject(0).getString(Constant.EARN));
-                        Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+                        session.setData(Constant.UPI,jsonArray.getJSONObject(0).getString(Constant.UPI));
                         Intent intent = new Intent(activity,OtpActivity.class);
                         intent.putExtra(Constant.MOBILE,etMobile.getText().toString().trim());
                         startActivity(intent);
@@ -93,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 } catch (JSONException e){
                     e.printStackTrace();
+
                 }
             }
             else {

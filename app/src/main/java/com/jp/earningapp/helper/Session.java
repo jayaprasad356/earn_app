@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
 
-
+import com.jp.earningapp.LoginActivity;
 
 
 public class Session {
@@ -39,6 +39,17 @@ public class Session {
     public void setBoolean(String id, boolean val) {
         editor.putBoolean(id, val);
         editor.commit();
+    }
+    public void logoutUser(Activity activity) {
+        editor.clear();
+        editor.commit();
+
+
+        Intent i = new Intent(activity, LoginActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(i);
+        activity.finish();
     }
 
     public String getData(String id) {

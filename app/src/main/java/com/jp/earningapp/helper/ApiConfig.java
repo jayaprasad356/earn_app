@@ -8,6 +8,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.view.View;
 import android.widget.Toast;
+import co.paystack.android.PaystackSdk;
 
 import androidx.annotation.RequiresApi;
 
@@ -29,6 +30,7 @@ public class ApiConfig extends Application {
     static ApiConfig mInstance;
     public static final String TAG = ApiConfig.class.getSimpleName();
     RequestQueue mRequestQueue;
+    static AppEnvironment appEnvironment;
 
     public static String VolleyErrorMessage(VolleyError error) {
         String message = "";
@@ -49,6 +51,9 @@ public class ApiConfig extends Application {
             e.printStackTrace();
         }
         return message;
+    }
+    public AppEnvironment getAppEnvironment() {
+        return appEnvironment;
     }
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public static void RequestToVolley(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final boolean isProgress) {
@@ -86,6 +91,17 @@ public class ApiConfig extends Application {
         ApiConfig.getInstance().getRequestQueue().getCache().clear();
         ApiConfig.getInstance().addToRequestQueue(stringRequest);
     }
+    public static void SetAppEnvironment(Activity activity) {
+        if (Constant.PAYUMONEY_MODE.equals("production")) {
+            appEnvironment = AppEnvironment.PRODUCTION;
+        } else if (Constant.PAYUMONEY_MODE.equals("sandbox")) {
+            appEnvironment = AppEnvironment.SANDBOX;
+        } else {
+            appEnvironment = AppEnvironment.SANDBOX;
+        }
+        PaystackSdk.initialize(activity);
+    }
+
     public static void RequestToVolley(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final Map<String, String> fileParams) {
         if(isConnected(activity)) {
             VolleyMultiPartRequest multipartRequest = new VolleyMultiPartRequest(url,

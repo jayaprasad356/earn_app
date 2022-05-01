@@ -16,6 +16,7 @@ import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
 import com.jp.earningapp.WithdrawalActivity;
+import com.jp.earningapp.WithdrawalListActivity;
 import com.jp.earningapp.helper.Constant;
 import com.jp.earningapp.helper.Session;
 
@@ -76,7 +77,7 @@ public class HomeFragment extends Fragment {
         withdrawal_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WithdrawalActivity.class);
+                Intent intent = new Intent(getActivity(), WithdrawalListActivity.class);
                 startActivity(intent);
             }
         });

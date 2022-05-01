@@ -18,15 +18,15 @@
         android:layout_marginTop="100dp"/>
 
     <TextView
+        android:id="@+id/nametxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:id="@+id/nametxt"
         android:layout_below="@id/signuptxt"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="60dp"
+        android:text="Name"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/etName"
@@ -42,15 +42,15 @@
         android:padding="10dp" />
 
     <TextView
+        android:id="@+id/numbertxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mobile_number"
-        android:textColor="#000"
-        android:textSize="15dp"
-        android:id="@+id/numbertxt"
         android:layout_below="@id/etName"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/mobile_number"
+        android:textColor="#000"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/etMobile"
@@ -67,13 +67,36 @@
         android:padding="10dp" />
 
     <TextView
+        android:id="@+id/upitxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etMobile"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Upi"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/etUpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upitxt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg1"
+        android:hint="Upi"
+        android:padding="10dp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Referral Code"
         android:textColor="#000"
         android:textSize="15dp"
         android:id="@+id/codetxt"
-        android:layout_below="@id/etMobile"
+        android:layout_below="@id/etUpi"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"/>
 

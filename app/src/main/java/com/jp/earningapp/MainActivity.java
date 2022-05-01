@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         switch (item.getItemId()) {
             case R.id.nav_home:
                 getUserDetails();
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment,"EXPLORE").commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment,"HOME").commit();
                 return true;
 
             case R.id.nav_shop:
@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
                         session.setData(Constant.BALANCE,jsonArray.getJSONObject(0).getString(Constant.BALANCE));
+                        session.setData(Constant.EARN,jsonArray.getJSONObject(0).getString(Constant.EARN));
                     }
                     else {
                         Log.d("MAINACTIVITY",jsonObject.getString(Constant.MESSAGE));

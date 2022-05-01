@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jp.earningapp.helper.ApiConfig;
@@ -25,6 +26,7 @@ public class WithdrawalActivity extends AppCompatActivity {
     Button btnWithdrawal;
     Session session;
     Activity activity;
+    TextView earning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,10 @@ public class WithdrawalActivity extends AppCompatActivity {
 
         etWithdrawal = findViewById(R.id.etWithdrawal);
         btnWithdrawal = findViewById(R.id.btnWithdrawal);
+        earning = findViewById(R.id.earning);
         activity = WithdrawalActivity.this;
+
+        earning.setText("Earning Rs. "+session.getData(Constant.EARN));
 
         btnWithdrawal.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -11,40 +11,40 @@
 
         <RelativeLayout
             android:layout_width="250dp"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="130dp"
             android:background="@drawable/bg6">
 
             <RelativeLayout
+                android:id="@+id/layout1"
+                android:visibility="gone"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:background="@drawable/circularwhitebackground"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:id="@+id/layout1">
-            </RelativeLayout>
+                android:background="@drawable/circularwhitebackground"></RelativeLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Casino Merlin"
-                android:textSize="17dp"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/layout1"
                 android:id="@+id/merlin_txt"
-                android:layout_centerHorizontal="true"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Working Hours(10:00 AM-4:00 PM)"
-                android:textSize="13dp"
-                android:layout_below="@+id/merlin_txt"
-                android:id="@+id/working_txt"
+                android:layout_below="@+id/layout1"
                 android:layout_centerHorizontal="true"
-                android:textColor="#FFFFFF"/>
+                android:layout_marginTop="50dp"
+                android:text="Earn App Help Center"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/working_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/merlin_txt"
+                android:layout_centerHorizontal="true"
+                android:text="Working Hours(09:00 AM-10:00 PM)"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,18 +67,19 @@
                 android:textColor="#FFFFFF"/>
 
             <TextView
+                android:id="@+id/contact_us"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Me"
-                android:textColor="#22E614"
-                android:background="@drawable/bgwhite"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="40dp"
+                android:background="@drawable/bgwhite"
                 android:paddingStart="30dp"
                 android:paddingTop="10dp"
+                android:paddingEnd="30dp"
                 android:paddingBottom="10dp"
-                android:paddingEnd="30dp"/>
+                android:text="Contact Us"
+                android:textColor="#22E614" />
 
 
 
