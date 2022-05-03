@@ -49,8 +49,12 @@ public class HomeFragment extends Fragment {
         tvEarn = rootview.findViewById(R.id.tvEarn);
         tvRecharge = rootview.findViewById(R.id.tvRecharge);
         session = new Session(getActivity());
+        if (session.getData(Constant.DATA) != null){
+            tvEarn.setText(session.getData(Constant.EARN));
 
-        tvEarn.setText(session.getData(Constant.EARN));
+        }
+
+
         miner_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -37,6 +38,7 @@ public class WithdrawalListActivity extends AppCompatActivity {
     private SwipeRefreshLayout mSwipeRefreshLayout;
     Session session;
     Button withdrawal_amt;
+    TextView nowithdrawal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class WithdrawalListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_withdrawal_list);
         recyclerView = findViewById(R.id.recyclerView);
         withdrawal_amt = findViewById(R.id.withdrawal_amt);
+        nowithdrawal = findViewById(R.id.nowithdrawal);
         activity = WithdrawalListActivity.this;
         session = new Session(activity);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
@@ -74,6 +77,7 @@ public class WithdrawalListActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        nowithdrawal.setVisibility(View.GONE);
                         JSONObject object = new JSONObject(response);
                         JSONArray jsonArray = object.getJSONArray(Constant.DATA);
                         Gson g = new Gson();
@@ -93,6 +97,9 @@ public class WithdrawalListActivity extends AppCompatActivity {
                         withdrawalAdapter = new WithdrawalAdapter(activity, withdrawals);
                         recyclerView.setAdapter(withdrawalAdapter);
                         mSwipeRefreshLayout.setRefreshing(false);
+                    }
+                    else {
+                        nowithdrawal.setVisibility(View.VISIBLE);
                     }
 
                 } catch (JSONException e) {

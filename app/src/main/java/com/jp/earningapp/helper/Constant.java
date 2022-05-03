@@ -19,6 +19,7 @@ public class Constant {
     public static final String WITHDRAWAL_LIST_URL = BaseUrl + "withdrawal_list.php";
     public static final String BONUS_LIST_URL = BaseUrl + "bonus_list.php";
     public static final String MINER_URL = BaseUrl + "miner.php";
+    public static final String LEVEL_PERCENTAGE_LIST_URL = BaseUrl + "level_percentage_list.php";
     public static final String ID = "id";
     public static final String BALANCE = "balance";
     public static final String USER_MERCHANT_KEY = "xgTUVi";
@@ -63,4 +64,7 @@ public class Constant {
     public static final String MESSAGE = "message";
 
     public static final String LEVEL = "level";
+    public static final String LEVEL_1 = "level_1";
+    public static final String LEVEL_2 = "level_2";
+    public static final String LEVEL_3 = "level_3";
 }

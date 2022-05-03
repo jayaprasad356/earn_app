@@ -47,6 +47,8 @@ public class TeamFragment extends Fragment {
     Chip Level1,Level2,Level3;
     ArrayList<Team> teams = new ArrayList<>();
 
+    TextView level1percentage,level2percentage,level3percentage;
+
 
     public TeamFragment() {
         // Required empty public constructor
@@ -64,6 +66,9 @@ public class TeamFragment extends Fragment {
         Level1 = rootview.findViewById(R.id.level1);
         Level2 = rootview.findViewById(R.id.level2);
         Level3 = rootview.findViewById(R.id.level3);
+        level1percentage = rootview.findViewById(R.id.level1percentage);
+        level2percentage = rootview.findViewById(R.id.level2percentage);
+        level3percentage = rootview.findViewById(R.id.level3percentage);
         total_contribution = rootview.findViewById(R.id.total_contribution);
         team_size = rootview.findViewById(R.id.team_size);
         session = new Session(getActivity());
@@ -73,6 +78,8 @@ public class TeamFragment extends Fragment {
         code_txt.setText(session.getData(Constant.MY_REFER_CODE));
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(activity);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        getLevelDetails();
 
         code_txt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +123,33 @@ public class TeamFragment extends Fragment {
 
 
         return rootview;
+    }
+
+    private void getLevelDetails()
+    {
+        Map<String, String> params = new HashMap<>();
+        ApiConfig.RequestToVolley((result, response) -> {
+            if (result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
+
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        level1percentage.setText(jsonArray.getJSONObject(0).getString(Constant.LEVEL_1) + "%");
+                        level2percentage.setText(jsonArray.getJSONObject(0).getString(Constant.LEVEL_2) + "%");
+                        level3percentage.setText(jsonArray.getJSONObject(0).getString(Constant.LEVEL_3) + "%");
+
+                    }
+                    else {
+                        Log.d("TEAMFRAGMENT",jsonObject.getString(Constant.MESSAGE));
+
+                    }
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+
+        }, activity, Constant.LEVEL_PERCENTAGE_LIST_URL, params,true);
     }
 
     private void teamList(String s)

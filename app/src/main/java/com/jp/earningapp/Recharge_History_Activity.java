@@ -8,6 +8,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -34,12 +35,14 @@ public class Recharge_History_Activity extends AppCompatActivity {
     public static RechargeAdapter rechargeAdapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     Session session;
+    TextView norecharge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recharge_history);
         recyclerView = findViewById(R.id.recyclerView);
+        norecharge = findViewById(R.id.norecharge);
         activity = Recharge_History_Activity.this;
         session = new Session(activity);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
@@ -63,6 +66,7 @@ public class Recharge_History_Activity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        norecharge.setVisibility(View.GONE);
                         JSONObject object = new JSONObject(response);
                         JSONArray jsonArray = object.getJSONArray(Constant.DATA);
                         Gson g = new Gson();
@@ -84,6 +88,7 @@ public class Recharge_History_Activity extends AppCompatActivity {
                         mSwipeRefreshLayout.setRefreshing(false);
                     }
                     else {
+                        norecharge.setVisibility(View.VISIBLE);
                         Toast.makeText(activity, ""+String.valueOf(jsonObject.getString(Constant.MESSAGE)), Toast.LENGTH_SHORT).show();
                     }
 

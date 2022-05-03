@@ -36,6 +36,7 @@
                 android:layout_below="@+id/your_txt"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
+                android:text="0"
                 android:drawableStart="@drawable/ic_rupee"
                 android:textColor="#FFFF"
                 android:textSize="30dp" />
