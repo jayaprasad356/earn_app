@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class Recharge_History_Activity extends AppCompatActivity {
 
-    public static Activity activity;
+    Activity activity;
     public static RecyclerView recyclerView;
     public static RechargeAdapter rechargeAdapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;

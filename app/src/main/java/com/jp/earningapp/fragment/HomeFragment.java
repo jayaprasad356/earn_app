@@ -15,7 +15,7 @@ import com.jp.earningapp.BonusActivity;
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
 import com.jp.earningapp.RechargeActivity;
-import com.jp.earningapp.WithdrawalActivity;
+import com.jp.earningapp.ReferEarnActivity;
 import com.jp.earningapp.WithdrawalListActivity;
 import com.jp.earningapp.helper.Constant;
 import com.jp.earningapp.helper.Session;
@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
     RelativeLayout miner_layout;
     RelativeLayout recharge_layout;
     RelativeLayout withdrawal_layout;
-    RelativeLayout activity_layout;
+    RelativeLayout activity_layout,refer_layout;
     RelativeLayout news_layout;
     TextView tvEarn,tvRecharge;
     Session session;
@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
         withdrawal_layout = rootview.findViewById(R.id.withdrawal_layout);
         news_layout = rootview.findViewById(R.id.news_layout);
         activity_layout = rootview.findViewById(R.id.activity_layout);
+        refer_layout = rootview.findViewById(R.id.refer_layout);
         tvEarn = rootview.findViewById(R.id.tvEarn);
         tvRecharge = rootview.findViewById(R.id.tvRecharge);
         session = new Session(getActivity());
@@ -67,6 +68,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RechargeActivity.class);
+                startActivity(intent);
+            }
+        });
+        refer_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ReferEarnActivity.class);
                 startActivity(intent);
             }
         });

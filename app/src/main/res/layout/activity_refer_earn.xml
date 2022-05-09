@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReferEarnActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refer &amp; Earn"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_18dp"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/tv_count10"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count10"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 10 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+
+                        />
+
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 400 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_count50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="50"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count50"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 50 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 2000 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_count100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="100"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count100"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 100 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 4000 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_count150"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="150"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count150"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 150 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+
+                        />
+
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 6000 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_count300"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="300"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count300"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 300 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+
+                        />
+
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 12000 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round"
+                        android:layout_margin="@dimen/dimen_5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_count500"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="500"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_count500"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_baseline_local_activity_24"
+                            android:backgroundTint="@color/white" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bring 500 Valid users to recharge"
+                        android:layout_marginTop="@dimen/dimen_15dp"
+                        android:textSize="@dimen/dimen_16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+
+                        />
+
+
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="Claim 20000 $"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/share_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share With Your Friends"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:background="@drawable/button_bg"
+            app:backgroundTint="@null"
+            />
+    </LinearLayout>
+</ScrollView>

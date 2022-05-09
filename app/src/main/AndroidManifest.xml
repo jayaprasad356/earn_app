@@ -60,6 +60,9 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
         <activity
+            android:name=".ReferEarnActivity"
+            android:exported="false" />
+        <activity
             android:name=".WithdrawalListActivity"
             android:exported="false" />
         <activity
@@ -103,7 +106,7 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

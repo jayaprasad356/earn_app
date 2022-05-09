@@ -96,20 +96,32 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mining profile will be generated to your wallet at 12 midnight"
-        android:layout_marginStart="10dp"
-        android:id="@+id/mining_txt"
-        android:layout_below="@+id/linear_2"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_2">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <TextView
+        android:id="@+id/norecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No More Data"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:layout_below="@+id/mining_txt"/>
+        android:text="No Records"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
 
 </RelativeLayout>

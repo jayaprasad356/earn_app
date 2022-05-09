@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="new_user_sign_up">New User, Sign Up.</string>
-    <string name="refer_instructions">Recommend a friend to join, you can get 10% commission of  your friend’s profit.First-level friends: 10% Second-level friends: 3% Third-level friends: 1%</string>
+    <string name="refer_instructions">This is referral code , share with your friends and earn more</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="send_otp">Send Otp</string>
     <string name="processing">Processing</string>
