@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/merlin_txt"
                 android:layout_centerHorizontal="true"
-                android:text="Working Hours(09:00 AM-10:00 PM)"
+                android:text="Working Hours(09:00 AM-07:00 PM)"
                 android:textColor="#FFFFFF"
                 android:textSize="13dp" />
 

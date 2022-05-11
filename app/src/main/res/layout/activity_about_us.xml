@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutUsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:background="@color/green"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/dimen_10dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/dimen_20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp"
+            android:text="What is the income credit time of algha2-app plans?\n
+    Daily income of each active plan is credited at sharp 12.00 am midnight
+Is Income generated from plan can be withdraw directly?
+Yes, incomes are credited to withdrawable wallet. So they can be withdraw right-away\n\nHow refer commission are distributed?\n
+    Refer commission are grabbed by your account when your refers(downline members) recharge in alpha 2 recharge section by any methods
+\n\nWhat happen when wrong bank info are available in account?\n
+    While withdrawing with wrong bank details your full withdraw amount will get refund instantly or within few minutes. Then you can withdraw that amount again with correct bank details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_20dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

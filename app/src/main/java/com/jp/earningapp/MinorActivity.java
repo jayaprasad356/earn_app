@@ -102,7 +102,7 @@ public class MinorActivity extends AppCompatActivity {
                     Toast.makeText(activity, String.valueOf(e), Toast.LENGTH_SHORT).show();
                 }
             }
-        }, activity, Constant.PURCHASE_PLAN_URL, params, true);
+        }, activity, Constant.PURCHASED_PLAN_LIST_URL, params, true);
     }
 
     private void minorDetails()

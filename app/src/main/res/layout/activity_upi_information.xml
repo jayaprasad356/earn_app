@@ -33,47 +33,30 @@
     </LinearLayout>
 
 
-
-    <TextView
-        android:id="@+id/bank_txt"
+    <EditText
+        android:id="@+id/etUpi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/l1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/bgcurvegreen"
-        android:paddingStart="40dp"
-        android:paddingTop="15dp"
-        android:paddingEnd="40dp"
-        android:paddingBottom="15dp"
-        android:text="SAMPLEUPI@MYBANK.IN"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Our Support"
-        android:textSize="18dp"
-        android:id="@+id/support_txt"
-        android:textColor="#6DCF91"
-        android:layout_margin="20dp"
-        android:layout_below="@+id/bank_txt"
-        android:background="@drawable/bgblackstrokecurve"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_centerHorizontal="true"/>
-
-    <LinearLayout
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg7"
+        android:hint=""
+        android:padding="15dp" />
+    <Button
+        android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/support_txt"
+        android:layout_below="@+id/etUpi"
+        android:text="Update"
+        android:layout_margin="30dp"
+        android:textAllCaps="false" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp">
 
         <RelativeLayout

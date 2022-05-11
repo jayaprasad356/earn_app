@@ -1,8 +1,8 @@
 package com.jp.earningapp.helper;
 
 public class Constant {
-   //public static final String MainBaseUrl = "http://192.168.43.38/earnapp/";
-    public static final String MainBaseUrl = "http://earnapp.greymatterworks.in/";
+   public static final String MainBaseUrl = "http://192.168.43.38/earnapp/";
+    //public static final String MainBaseUrl = "http://earnapp.greymatterworks.in/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String SIGNUP_USER_URL = BaseUrl + "signup_user.php";
     public static final String CHECK_MOBILE_NUMBER_URL = BaseUrl + "checkmobilenumber.php";
@@ -15,12 +15,14 @@ public class Constant {
     public static final String USER_DETAILS_URL = BaseUrl + "user_details.php";
     public static final String DAILY_INCOME_URL = BaseUrl + "daily_income.php";
     public static final String PURCHASE_PLAN_URL = BaseUrl + "purchase_plan.php";
+    public static final String PURCHASED_PLAN_LIST_URL = BaseUrl + "purchased_plans_lists.php";
     public static final String RECHARGE_LIST_URL = BaseUrl + "recharge_list.php";
     public static final String WITHDRAWAL_LIST_URL = BaseUrl + "withdrawal_list.php";
     public static final String BONUS_LIST_URL = BaseUrl + "bonus_list.php";
     public static final String MINER_URL = BaseUrl + "miner.php";
     public static final String LEVEL_PERCENTAGE_LIST_URL = BaseUrl + "level_percentage_list.php";
     public static final String PURCHASED_PLANS_URL = BaseUrl + "purchased_plans.php";
+    public static final String UPDATE_UPI_URL = BaseUrl + "update_upi.php";
     public static final String ID = "id";
     public static final String BALANCE = "balance";
     public static final String USER_MERCHANT_KEY = "xgTUVi";

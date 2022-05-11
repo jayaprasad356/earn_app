@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.jp.earningapp.AboutUsActivity;
 import com.jp.earningapp.MainActivity;
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
@@ -34,7 +35,7 @@ import java.util.Map;
 
 public class ProfileFragment extends Fragment {
 
-    RelativeLayout relayout_1,withdrawal_layout,miner_layout,recharge_layout;
+    RelativeLayout relayout_1,withdrawal_layout,miner_layout,recharge_layout,relayout_2;
     Session session;
     TextView nadila_txt,tvBalance;
     TextView tvPurchasedPlans,tvTodayProfit,tvTotalProfit,tvTodayProfit2;
@@ -54,6 +55,7 @@ public class ProfileFragment extends Fragment {
         rootview = inflater.inflate(R.layout.fragment_profile, container, false);
 
         relayout_1 = rootview.findViewById(R.id.relayout_1);
+        relayout_2 = rootview.findViewById(R.id.relayout_2);
         tvBalance = rootview.findViewById(R.id.tvBalance);
         logout = rootview.findViewById(R.id.logout);
         activity = getActivity();
@@ -100,6 +102,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), UPI_Information_Activity.class);
+                startActivity(intent);
+            }
+        });
+        relayout_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AboutUsActivity.class);
                 startActivity(intent);
             }
         });

@@ -78,6 +78,7 @@ public class PlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         params.put(Constant.DAILY_INCOME,daily_income);
         params.put(Constant.VALID,valid);
         ApiConfig.RequestToVolley((result, response) -> {
+            Log.d("Plan_Adapter",response);
 
             if (result) {
                 try {

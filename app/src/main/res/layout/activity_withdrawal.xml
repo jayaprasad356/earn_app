@@ -43,9 +43,13 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_margin="10dp"
-        android:visibility="gone"
-        android:text="INCLUDES OF 5% GST MONDAY TO SUNDAY 10:00-17:00,WITHDRAWAL WILL ARRIVE WITHIN 24 HOURS,MINIMUM IS 110 RS"
-        android:textSize="10dp" />
+        android:text="Withdrawal Time  9AM To 7PM
+
+ Withdrawal Processing Time is  5 Min to 20 Min
+ Withdraw Service Tax  = 5%
+ Maximum amount per transaction 80000
+ Minimum amount per transaction Allowing withdrawal even previous one is processing 100"
+        android:textSize="15dp" />
 
 
 

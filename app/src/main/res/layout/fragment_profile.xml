@@ -194,7 +194,6 @@
 
 
                 <TextView
-                    android:visibility="gone"
                     android:id="@+id/common_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -208,7 +207,6 @@
                     android:textSize="18dp" />
 
                 <RelativeLayout
-                    android:visibility="gone"
                     android:id="@+id/relayout_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -261,7 +259,6 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:visibility="gone"
                     android:id="@+id/relayout_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -317,7 +314,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/relayout_2"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="Account Options"
                     android:textColor="#000"
                     android:textSize="18dp" />
