@@ -11,7 +11,7 @@
     <string name="MerchantKey">xgTUVi</string>
     <string name="MerchantId">8560023</string>
     <string name="MerchantSalt">IeanZCuBE4GiPlteaM22VqCkcKMOuRnF</string>
-    <string name="sUrl">https://test.payumoney.com/mobileapp/payumoney/success.php</string>
-    <string name="fUrl">https://test.payumoney.com/mobileapp/payumoney/failure.php</string>
+    <string name="sUrl">https://www.payumoney.com/mobileapp/payumoney/success.php</string>
+    <string name="fUrl">https://www.payumoney.com/mobileapp/payumoney/failure.php</string>
 
 </resources>
