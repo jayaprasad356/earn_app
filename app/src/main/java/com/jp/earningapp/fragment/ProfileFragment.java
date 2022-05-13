@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jp.earningapp.AboutUsActivity;
+import com.jp.earningapp.FaqActivity;
 import com.jp.earningapp.MainActivity;
 import com.jp.earningapp.MinorActivity;
 import com.jp.earningapp.R;
@@ -108,7 +109,7 @@ public class ProfileFragment extends Fragment {
         relayout_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AboutUsActivity.class);
+                Intent intent = new Intent(getActivity(), FaqActivity.class);
                 startActivity(intent);
             }
         });

@@ -289,7 +289,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
-                                android:text="About Us"
+                                android:text="FAQ's"
                                 android:textColor="#000"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />

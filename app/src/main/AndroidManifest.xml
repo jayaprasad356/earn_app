@@ -60,6 +60,9 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
         <activity
+            android:name=".FaqActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutUsActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaqActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frequently Asked \nQuestion"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_30dp"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textColor="@color/primary_green"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/queslyt">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is the income credit time of Loom solar advance plans?"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/answer"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Daily income of each active plan is credited at sharp 12.00 am midnight Is Income generated from plan can be withdraw directly? Yes, incomes are credited to withdrawable wallet. So they can be withdraw right-away"
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/queslyt1">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. How refer commission are distributed?"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/answer1"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Refer commission are grabbed by your account when your refers(downline members) recharge in Loom solar advance recharge section by any method."
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/queslyt2">
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. What happen when wrong bank info are available in account?"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/answer2"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="While withdrawing with wrong bank details your full withdraw amount will get refund instantly or within few minutes. Then you can withdraw that amount again with correct bank details."
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

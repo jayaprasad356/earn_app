@@ -39,7 +39,6 @@
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.184" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/ic_red_circle.xml" value="0.184" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/drawable/round.xml" value="0.18" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_about_us.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_bonus.xml" value="0.17135416666666667" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
@@ -51,17 +50,17 @@
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_recharge_history.xml" value="0.17552083333333332" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_refer_earn.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_splash.xml" value="0.17135416666666667" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_transaction_details.xml" value="0.17552083333333332" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_upi_information.xml" value="0.3333333333333333" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_upi_information.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_withdrawal.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/activity_withdrawal_list.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/bonus_lyt.xml" value="0.3333333333333333" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_call_us.xml" value="0.3333333333333333" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_call_us.xml" value="0.22" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_home.xml" value="0.3333333333333333" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_profile.xml" value="0.23451635351426584" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_shop.xml" value="0.17552083333333332" />
-        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_team.xml" value="0.22" />
+        <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/fragment_team.xml" value="0.3333333333333333" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/plan_lyt.xml" value="0.3333333333333333" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/purchased_plan_lyt.xml" value="0.3333333333333333" />
         <entry key="..\:/Studio Projects/earn_app/app/src/main/res/layout/recharge_lyt.xml" value="0.3333333333333333" />
@@ -111,10 +110,19 @@
         <entry key="..\:/Users/visha/AndroidStudioProjects/earn_app/app/src/main/res/layout/fragment_shop.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/visha/AndroidStudioProjects/earn_app/app/src/main/res/layout/fragment_team.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/visha/AndroidStudioProjects/earn_app/app/src/main/res/layout/post_lyt.xml" value="0.25416666666666665" />
+        <entry key="..\:/earn_app/app/src/main/res/drawable/round.xml" value="0.13" />
+        <entry key="..\:/earn_app/app/src/main/res/drawable/splash_screen.xml" value="0.1225" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/activity_faq.xml" value="0.20416666666666666" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/activity_recharge.xml" value="0.1675929884566054" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/fragment_call_us.xml" value="0.25" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/purchased_plan_lyt.xml" value="0.5" />
+        <entry key="..\:/earn_app/app/src/main/res/layout/splashlayout.xml" value="0.18425925925925926" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

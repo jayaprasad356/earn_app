@@ -10,72 +10,159 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="250dp"
-            android:layout_height="300dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="130dp"
-            android:background="@drawable/bg6">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
 
-            <ImageView
-                android:id="@+id/callcenter"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_10dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/callcenter" />
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="@drawable/bg6"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/callcenter_male"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:src="@drawable/callcenter" />
 
 
-            <TextView
-                android:id="@+id/merlin_txt"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/merlin_txt_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Earn App Help Center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/working_txt_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="Working Hours(09:00 AM-07:00 PM)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/help_txt_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="We are here to help you as soon as possible"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/contact_us_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="Contact Us"
+                    android:textAllCaps="false"
+                    android:textColor="#22E614"
+                    app:backgroundTint="@color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/callcenter"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="Earn App Help Center"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/working_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/merlin_txt"
-                android:layout_centerHorizontal="true"
-                android:text="Working Hours(09:00 AM-07:00 PM)"
-                android:textColor="#FFFFFF"
-                android:textSize="13dp" />
-
-            <TextView
-                android:id="@+id/help_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/working_txt"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="We are here to help you as soon as possible"
-                android:textColor="#FFFFFF"
-                android:textSize="13dp" />
-
-            <Button
-                android:id="@+id/contact_us"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/help_txt"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dimen_10dp"
-                android:background="@drawable/bgwhite"
-                android:text="Contact Us"
-                android:textAllCaps="false"
-                android:textColor="#22E614"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="@drawable/bg6"
+                android:orientation="vertical"
 
-                app:backgroundTint="@null" />
+                >
+
+                <ImageView
+                    android:id="@+id/callcenter_FM"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:src="@drawable/ic_customer_service_support_svgrepo_com" />
 
 
+                <TextView
+                    android:id="@+id/merlin_txt_FM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Earn App Help Center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/working_txt_FM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="Working Hours(09:00 AM-07:00 PM)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/help_txt_FM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="We are here to help you as soon as possible"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/contact_us_FM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="Contact Us"
+                    android:textAllCaps="false"
+                    android:textColor="#22E614"
+                    app:backgroundTint="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/telegram_btn"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:background="@drawable/telegram"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dimen_20dp"
+            />
 
     </RelativeLayout>
 
