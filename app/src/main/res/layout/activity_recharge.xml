@@ -53,7 +53,7 @@
             app:selectionRequired="true"
             app:singleSelection="true">
             <com.google.android.material.chip.Chip
-                android:id="@+id/razorpay"
+                android:id="@+id/upi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -61,13 +61,14 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:checked="true"
-                android:text="Razorpay"
+                android:text="UPI"
                 app:checkedIconEnabled="false"
                 app:checkedIcon="@null"
                 app:chipBackgroundColor="@color/bg_chip_state_list"
                 />
             <com.google.android.material.chip.Chip
-                android:id="@+id/upi"
+                android:id="@+id/razorpay"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkable="true"
@@ -75,8 +76,10 @@
                 android:textAlignment="center"
                 app:checkedIconEnabled="false"
                 app:checkedIcon="@null"
+                android:visibility="gone"
+                android:text="Razorpay"
                 android:focusable="true"
-                android:text="UPI"
+
                 app:chipBackgroundColor="@color/bg_chip_state_list"
                 />
 

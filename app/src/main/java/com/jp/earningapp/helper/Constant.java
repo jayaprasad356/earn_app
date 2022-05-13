@@ -56,6 +56,8 @@ public class Constant {
     public static final String ROLE = "role";
     public static final String DATA = "data";
     public static final String UPI_ID = "upi_id";
+    public static final String RAZORPAY_KEY = "razorpay_key";
+    public static final String RAZORPAY_PAYMENT_METHOD = "razorpay_payment_method";
     public static final String UPLOAD_PROFILE = "upload_profile";
     public static final String AUTHORIZATION = "Authorization";
     public static final String AccessKey = "accesskey";

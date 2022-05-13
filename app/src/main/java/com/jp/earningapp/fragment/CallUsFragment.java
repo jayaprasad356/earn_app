@@ -38,7 +38,7 @@ public class CallUsFragment extends Fragment {
         contact_us_male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://api.whatsapp.com/send?phone=+12497024644";
+                String url = "https://api.whatsapp.com/send?phone=+12294660536";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -47,7 +47,7 @@ public class CallUsFragment extends Fragment {
         contact_us_FM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://api.whatsapp.com/send?phone=+12497024644";
+                String url = "https://api.whatsapp.com/send?phone=+12017815652";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -56,7 +56,7 @@ public class CallUsFragment extends Fragment {
         telegram_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://api.whatsapp.com/send?phone=+12497024644";
+                String url = "https://t.me/loomsolaradvance";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);

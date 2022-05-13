@@ -23,6 +23,7 @@ import com.payumoney.core.PayUmoneyConstants;
 import com.payumoney.core.PayUmoneySdkInitializer;
 import com.payumoney.sdkui.ui.utils.PayUmoneyFlowManager;
 import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
 import com.shreyaspatil.EasyUpiPayment.EasyUpiPayment;
 import com.shreyaspatil.EasyUpiPayment.listener.PaymentStatusListener;
 import com.shreyaspatil.EasyUpiPayment.model.TransactionDetails;
@@ -40,7 +41,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class RechargeActivity extends AppCompatActivity implements PaymentStatusListener {
+public class RechargeActivity extends AppCompatActivity implements PaymentStatusListener, PaymentResultListener {
     Slider priceslider;
     EditText etPay;
     Button paybtn;
@@ -50,6 +51,8 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
     Chip razorpay,upi;
     TextView tvBalance;
     String UPI_ID = "";
+    String RAZORPAY_KEY = "";
+    String RAZORPAY_PAYMENT_METHOD = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,17 +146,17 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
         int amount = Math.round(Float.parseFloat(samount) * 100);
         // initialize Razorpay account.
         Checkout checkout = new Checkout();
-        checkout.setKeyID("rzp_test_S50jCnHV2iBtsa");
+        checkout.setKeyID(RAZORPAY_KEY);
 
 
         // initialize json object
         JSONObject object = new JSONObject();
         try {
             // to put name
-            object.put("name", "Geeks for Geeks");
+            object.put("name", session.getData(Constant.NAME));
 
             // put description
-            object.put("description", "Test payment");
+            object.put("description", "App payment");
 
             // to set theme color
             object.put("theme.color", "");
@@ -165,10 +168,10 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
             object.put("amount", amount);
 
             // put mobile number
-            object.put("prefill.contact", "9284064503");
+            object.put("prefill.contact", session.getData(Constant.MOBILE));
 
             // put email
-            object.put("prefill.email", "chaitanyamunje@gmail.com");
+            object.put("prefill.email", "test@gmail.com");
 
             // open razorpay to checkout activity
             checkout.open(RechargeActivity.this, object);
@@ -255,6 +258,19 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
         }
         return hexString.toString();
     }
+    @Override
+    public void onPaymentSuccess(String s) {
+        // this method is called on payment success.
+        Toast.makeText(this, "Payment is successful : " + s, Toast.LENGTH_SHORT).show();
+        rechargeAmount();
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+        // on payment failed.
+        Log.d("PAYMENT",s);
+       // Toast.makeText(this, "Payment Failed due to error : " + s, Toast.LENGTH_SHORT).show();
+    }
     private PayUmoneySdkInitializer.PaymentParam calculateServerSideHashAndInitiatePayment1(final PayUmoneySdkInitializer.PaymentParam paymentParam) {
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -291,6 +307,12 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
                     JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
                         UPI_ID = jsonArray.getJSONObject(0).getString(Constant.UPI_ID);
+                        RAZORPAY_KEY = jsonArray.getJSONObject(0).getString(Constant.RAZORPAY_KEY);
+                        RAZORPAY_PAYMENT_METHOD = jsonArray.getJSONObject(0).getString(Constant.RAZORPAY_PAYMENT_METHOD);
+                        if (RAZORPAY_PAYMENT_METHOD.equals("1") && !RAZORPAY_KEY.equals("")){
+                            razorpay.setVisibility(View.VISIBLE);
+
+                        }
 
                     }
                     else {
@@ -314,7 +336,7 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
     {
         String type = "";
         if (razorpay.isChecked()){
-            type = "payu";
+            type = "razorpay";
 
         }
         else {
@@ -325,6 +347,7 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
         params.put(Constant.AMOUNT,etPay.getText().toString());
         params.put(Constant.TYPE,type);
         ApiConfig.RequestToVolley((result, response) -> {
+            Log.d("UPI_RESPONSE",response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
@@ -351,12 +374,13 @@ public class RechargeActivity extends AppCompatActivity implements PaymentStatus
 
     @Override
     public void onTransactionCompleted(TransactionDetails transactionDetails) {
-        rechargeAmount();
+
 
     }
 
     @Override
     public void onTransactionSuccess() {
+        rechargeAmount();
         Toast.makeText(activity, "Transaction Success", Toast.LENGTH_SHORT).show();
 
     }
