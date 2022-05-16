@@ -7,7 +7,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.jp.earningapp"
+        applicationId "com.lsa.ayu"
         minSdk 27
         targetSdk 30
         versionCode 1

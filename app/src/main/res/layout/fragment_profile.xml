@@ -393,7 +393,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/withdrawal_lightblue" />
+                            android:src="@drawable/minor_icon2" />
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
@@ -531,12 +531,66 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/share_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profit_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/share_icon" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Share App"
+                                android:textColor="#000"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relayout_7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/profit_layout"
+                    android:layout_below="@+id/share_re"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"

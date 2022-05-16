@@ -1,131 +1,41 @@
 {
   "project_info": {
-    "project_number": "299336447075",
-    "project_id": "drive2mart",
-    "storage_bucket": "drive2mart.appspot.com"
+    "project_number": "954558046557",
+    "project_id": "loom-solar-advance",
+    "storage_bucket": "loom-solar-advance.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:299336447075:android:c860bd603f15bf0423f456",
+        "mobilesdk_app_id": "1:954558046557:android:fa9c134bd9d5def197c8b4",
         "android_client_info": {
-          "package_name": "com.example.bigwigg"
+          "package_name": "com.lsa.ayu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "299336447075-5p5pulsc3i6pv3v08c99m0iut6ar4aka.apps.googleusercontent.com",
+          "client_id": "954558046557-athhkfud72hp00fang10bmluhckhh6l8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.bigwigg",
+            "package_name": "com.lsa.ayu",
             "certificate_hash": "8881fdd25c090af0389a1c16daa2b5a47b80e897"
           }
         },
         {
-          "client_id": "299336447075-djf385nj516j4s4l9cgh1td2mm8e3ebc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.bigwigg",
-            "certificate_hash": "f9a74944e0d8951610e4426b3fbc105d4b2151bb"
-          }
-        },
-        {
-          "client_id": "299336447075-vuo699m5a2746ln95fttirf5itn13fg8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.bigwigg",
-            "certificate_hash": "260aac40fd43849f9b171431696d8bb2a7a0e930"
-          }
-        },
-        {
-          "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
+          "client_id": "954558046557-jsahq005g0m6ma6pl2q24iabavgt4kd4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAL_Q2EPINO8IEAejFeugVztVv1RAj_HHY"
+          "current_key": "AIzaSyANKobVfFonIbHntb3ctr-ck0AB4QsM_Ts"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:299336447075:android:d442f52fde077fe323f456",
-        "android_client_info": {
-          "package_name": "com.jp.earningapp"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "299336447075-kflrghnhjaf11v9jsb3qknjihe1vl33o.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.jp.earningapp",
-            "certificate_hash": "8881fdd25c090af0389a1c16daa2b5a47b80e897"
-          }
-        },
-        {
-          "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAL_Q2EPINO8IEAejFeugVztVv1RAj_HHY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:299336447075:android:1d3dbf9451a7e35423f456",
-        "android_client_info": {
-          "package_name": "d2m.drive2mart.shop"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "299336447075-338rvb9q4qogvak8282gnctcn42uqvet.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "d2m.drive2mart.shop",
-            "certificate_hash": "c1c200f29014c5bb03b51df11213ec2a22f461d0"
-          }
-        },
-        {
-          "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAL_Q2EPINO8IEAejFeugVztVv1RAj_HHY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "299336447075-d27566nomu4jag5o75sj3adv096vml7r.apps.googleusercontent.com",
+              "client_id": "954558046557-jsahq005g0m6ma6pl2q24iabavgt4kd4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

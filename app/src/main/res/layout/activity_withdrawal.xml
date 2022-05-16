@@ -28,6 +28,13 @@
         android:drawableStart="@drawable/ic_rupee1"
         android:hint="Enter the withdrawal amount"
         android:padding="15dp" />
+    <TextView
+        android:id="@+id/tvWatax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:text=""/>
 
 
     <Button
@@ -41,14 +48,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:layout_margin="10dp"
-        android:text="Withdrawal Time  9AM To 7PM
-
- Withdrawal Processing Time is  5 Min to 20 Min
- Withdraw Service Tax  = 5%
- Maximum amount per transaction 80000
- Minimum amount per transaction Allowing withdrawal even previous one is processing 100"
+        android:text="Withdrawal Time  9AM To 7PM\nWithdrawal Processing Time is  5 Min to 20 Min.\nWithdraw Service Tax  = 6%\nMaximum amount per transaction 80000\nMinimum amount per transaction Allowing withdrawal even previous one is processing 100"
         android:textSize="15dp" />
 
 
