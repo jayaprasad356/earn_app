@@ -27,7 +27,7 @@ public class ReferEarnActivity extends AppCompatActivity {
                 /*Create an ACTION_SEND Intent*/
                 Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                 /*This will be the actual content you wish you share.*/
-                String shareBody = session.getData(Constant.MY_REFER_CODE) + " Use My Refer Code to Join Our App and Share with Your Friends Also";
+                String shareBody = session.getData(Constant.MY_REFER_CODE) + " Use My Refer Code to Join Our App and Share with Your Friends Also" + "\n\n" +  "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
                 /*The type of the content is text, obviously.*/
                 intent.setType("text/plain");
                 /*Applying information Subject and Body.*/

@@ -23,6 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.lsa.ayu.helper.Constant;
 import com.lsa.ayu.helper.Session;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import in.aabhasjindal.otptextview.OTPListener;
@@ -36,7 +37,7 @@ public class OtpActivity extends AppCompatActivity {
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-    private String mVerificationId;
+    private String mVerificationId = "";
     private static final String TAG = "OTP Activity";
     Session session;
 
@@ -52,12 +53,12 @@ public class OtpActivity extends AppCompatActivity {
         Mobile = getIntent().getStringExtra(Constant.MOBILE);
         session = new Session(OtpActivity.this);
         tvOtp.setText("Otp Sent to +91 "+Mobile);
-//        try {
-//            sendOTP(Mobile);
-//
-//        }catch (Exception e){
-//
-//        }
+        try {
+            sendOTP(Mobile);
+
+        }catch (Exception e){
+
+        }
         otp_view.setOtpListener(new OTPListener() {
             @Override
             public void onInteractionListener() {
@@ -75,24 +76,19 @@ public class OtpActivity extends AppCompatActivity {
                     finish();
 
                 }
+                else {
+                    try {
+                        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, otp);
+                        signInWithPhoneAuthCredential(credential);
+
+                    }catch (Exception e){
+
+                    }
+
+                }
 
             }
         });
-
-
-//        otp_view.setOtpListener(new OTPListener() {
-//            @Override
-//            public void onInteractionListener() {
-//
-//            }
-//
-//            @Override
-//            public void onOTPComplete(String otp) {
-//                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, otp);
-//                signInWithPhoneAuthCredential(credential);
-//
-//            }
-//        });
     }
     private void sendOTP(String mobilenumber) {
 

@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
         tvEarn = rootview.findViewById(R.id.tvEarn);
         tvRecharge = rootview.findViewById(R.id.tvRecharge);
         session = new Session(getActivity());
-        if (session.getData(Constant.DATA).equals("")){
+        if (session.getData(Constant.EARN).equals("")){
             tvEarn.setText("0");
 
         }else {
