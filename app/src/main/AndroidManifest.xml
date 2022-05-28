@@ -48,7 +48,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name="com.lsa.ayu.helper.ApiConfig"
+        android:name=".helper.ApiConfig"
         android:allowBackup="false"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/earnapplogo"
@@ -60,22 +60,25 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
         <activity
-            android:name="com.lsa.ayu.FaqActivity"
+            android:name=".TestActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.AboutUsActivity"
+            android:name=".FaqActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.ReferEarnActivity"
+            android:name=".AboutUsActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.WithdrawalListActivity"
+            android:name=".ReferEarnActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.PayUMoneyActivity"
+            android:name=".WithdrawalListActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.SplashActivity"
+            android:name=".PayUMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,37 +87,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.lsa.ayu.BonusActivity"
+            android:name=".BonusActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.MinorActivity"
+            android:name=".MinorActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.WithdrawalActivity"
+            android:name=".WithdrawalActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.RechargeActivity"
+            android:name=".RechargeActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.Recharge_History_Activity"
+            android:name=".Recharge_History_Activity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.UPI_Information_Activity"
+            android:name=".UPI_Information_Activity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.TransactionDetailsActivity"
+            android:name=".TransactionDetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.SignUpActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.OtpActivity"
+            android:name=".OtpActivity"
             android:exported="false" />
         <activity
-            android:name="com.lsa.ayu.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name="com.lsa.ayu.MainActivity"
+            android:name=".MainActivity"
             android:exported="true" />
     </application>
 

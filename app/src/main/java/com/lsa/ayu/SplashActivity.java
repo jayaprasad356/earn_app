@@ -10,8 +10,15 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.AppUpdaterUtils;
+import com.github.javiersantos.appupdater.enums.AppUpdaterError;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
+import com.github.javiersantos.appupdater.objects.Update;
 import com.lsa.ayu.helper.Session;
 
 import org.jsoup.Jsoup;
@@ -22,61 +29,44 @@ public class SplashActivity extends AppCompatActivity {
     Handler handler;
     Session session;
     Activity activity;
-    private String sLatestVersion,sCurrentVersion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        new GetLatestVersion().execute();
         activity = SplashActivity.this;
         session = new Session(activity);
         handler = new Handler();
+        AppUpdaterUtils appUpdaterUtils = new AppUpdaterUtils(this)
+                .setUpdateFrom(UpdateFrom.GOOGLE_PLAY)
+                .withListener(new AppUpdaterUtils.UpdateListener() {
+                    @Override
+                    public void onSuccess(Update update, Boolean isUpdateAvailable) {
+                        Log.d("Latest Version", update.getLatestVersion());
+                        Log.d("Latest Version Code", String.valueOf(update.getLatestVersionCode()));
+                        Log.d("Release notes", update.getReleaseNotes());
+                        Log.d("URL", String.valueOf(update.getUrlToDownload()));
+                        Log.d("Is update available?", Boolean.toString(isUpdateAvailable));
+                        if (isUpdateAvailable){
+                            updateAlertDialog();
+
+                        }
+                        else {
+                            GotoActivity();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailed(AppUpdaterError error) {
+                        Log.d("AppUpdater Error", "Something went wrong");
+                    }
+                });
+        appUpdaterUtils.start();
 
 
     }
-    private class GetLatestVersion extends AsyncTask<String,Void,String>
-    {
-        @Override
-        protected String doInBackground(String... strings) {
-            try {
 
-                sLatestVersion = Jsoup.connect("https://play.google.com/store/apps/details?id="+getPackageName()).timeout(30000).get().select("div.hAyfc:nth-child(4)>"+
-                        "span:nth-child(2) > div:nth-child(1)"+"> span:nth-child(1)").first().ownText();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return sLatestVersion;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            if(CheckNetwork.isInternetAvailable(SplashActivity.this)){
-                sCurrentVersion = BuildConfig.VERSION_NAME;
-                /*Log.e("VERSION",sCurrentVersion + " "+sLatestVersion);
-                long cVersion = Long.parseLong(sCurrentVersion);
-                long lVersion = Long.parseLong(sLatestVersion);*/
-
-                if (sLatestVersion != null && !sLatestVersion.equals(sCurrentVersion)){
-                    updateAlertDialog();
-
-                }
-                else {
-
-                    GotoActivity();
-                    //new Handler().postDelayed(() -> startActivity(new Intent(SplashActivity.this, WelcomeActivity.class).putExtra(Constant.FROM, "").addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)), SPLASH_TIME_OUT);
-
-                }
-
-            }
-            else {
-                Toast.makeText(SplashActivity.this, "Please Connect Internet", Toast.LENGTH_SHORT).show();
-
-
-            }
-
-        }
-    }
     private void updateAlertDialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

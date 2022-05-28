@@ -63,7 +63,7 @@ public class Constant {
     public static final String AccessKey = "accesskey";
     public static final String AccessKeyVal = "90336";
     //set your jwt secret key here...key must same in PHP and Android
-    public static final String JWT_KEY = "big_wigg";
+    public static final String JWT_KEY = "12345678";
     public static final String SUCCESS = "success";
     public static final String TEAM_SIZE = "team_size";
     public static final String TOTAL_CONTRIBUTION = "total_contribution";

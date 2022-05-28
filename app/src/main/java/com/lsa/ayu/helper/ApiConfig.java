@@ -9,6 +9,9 @@ import android.os.Build;
 import android.view.View;
 import android.widget.Toast;
 import co.paystack.android.PaystackSdk;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
 import androidx.annotation.RequiresApi;
 
@@ -24,7 +27,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.security.Key;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
+
+import javax.crypto.spec.SecretKeySpec;
 
 public class ApiConfig extends Application {
     static ApiConfig mInstance;
@@ -78,11 +86,19 @@ public class ApiConfig extends Application {
             String message = VolleyErrorMessage(error);
             if (!message.equals(""))
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+
         }) {
+            @Override
+            public Map<String, String> getHeaders() {
+                Map<String, String> params1 = new HashMap<>();
+                params1.put(Constant.AUTHORIZATION, "Bearer " + createJWT("eKart", "eKart Authentication"));
+                return params1;
+            }
 
 
             @Override
             protected Map<String, String> getParams() {
+                params.put(Constant.AccessKey, Constant.AccessKeyVal);
 
                 return params;
             }
@@ -91,6 +107,26 @@ public class ApiConfig extends Application {
         ApiConfig.getInstance().getRequestQueue().getCache().clear();
         ApiConfig.getInstance().addToRequestQueue(stringRequest);
     }
+    public static String createJWT(String issuer, String subject) {
+        try {
+            SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+            long nowMillis = System.currentTimeMillis();
+            Date now = new Date(nowMillis);
+            byte[] apiKeySecretBytes = Constant.JWT_KEY.getBytes();
+            Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
+            JwtBuilder builder = Jwts.builder()
+                    .setIssuedAt(now)
+                    .setSubject(subject)
+                    .setIssuer(issuer)
+                    .signWith(signatureAlgorithm, signingKey);
+
+            return builder.compact();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static void SetAppEnvironment(Activity activity) {
         if (Constant.PAYUMONEY_MODE.equals("production")) {
             appEnvironment = AppEnvironment.PRODUCTION;
