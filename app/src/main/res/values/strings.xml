@@ -13,5 +13,6 @@
     <string name="MerchantSalt">IeanZCuBE4GiPlteaM22VqCkcKMOuRnF</string>
     <string name="sUrl">https://www.payumoney.com/mobileapp/payumoney/success.php</string>
     <string name="fUrl">https://www.payumoney.com/mobileapp/payumoney/failure.php</string>
+    <string name="span_text">If you spam with our executive then it will be lead to account ban and fund lock.</string>
 
 </resources>

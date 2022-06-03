@@ -19,6 +19,13 @@ import com.github.javiersantos.appupdater.enums.AppUpdaterError;
 import com.github.javiersantos.appupdater.enums.Display;
 import com.github.javiersantos.appupdater.enums.UpdateFrom;
 import com.github.javiersantos.appupdater.objects.Update;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.play.core.tasks.OnFailureListener;
+import com.google.android.play.core.tasks.Task;
 import com.lsa.ayu.helper.Session;
 
 import org.jsoup.Jsoup;
@@ -37,32 +44,26 @@ public class SplashActivity extends AppCompatActivity {
         activity = SplashActivity.this;
         session = new Session(activity);
         handler = new Handler();
-        AppUpdaterUtils appUpdaterUtils = new AppUpdaterUtils(this)
-                .setUpdateFrom(UpdateFrom.GOOGLE_PLAY)
-                .withListener(new AppUpdaterUtils.UpdateListener() {
-                    @Override
-                    public void onSuccess(Update update, Boolean isUpdateAvailable) {
-                        Log.d("Latest Version", update.getLatestVersion());
-                        Log.d("Latest Version Code", String.valueOf(update.getLatestVersionCode()));
-                        Log.d("Release notes", update.getReleaseNotes());
-                        Log.d("URL", String.valueOf(update.getUrlToDownload()));
-                        Log.d("Is update available?", Boolean.toString(isUpdateAvailable));
-                        if (isUpdateAvailable){
-                            updateAlertDialog();
+        AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+        appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
 
-                        }
-                        else {
-                            GotoActivity();
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
+                updateAlertDialog();
+            }
+            else {
 
-                        }
-                    }
+                GotoActivity();
 
-                    @Override
-                    public void onFailed(AppUpdaterError error) {
-                        Log.d("AppUpdater Error", "Something went wrong");
-                    }
-                });
-        appUpdaterUtils.start();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                GotoActivity();
+
+            }
+        });
+
 
 
     }

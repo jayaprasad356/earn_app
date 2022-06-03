@@ -91,7 +91,13 @@
                     android:layout_marginRight="@dimen/dimen_10dp"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>
@@ -164,7 +170,13 @@
                     android:layout_marginRight="@dimen/dimen_10dp"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>
@@ -237,7 +249,13 @@
                     android:layout_marginRight="@dimen/dimen_10dp"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>
@@ -312,7 +330,13 @@
                     android:layout_marginRight="@dimen/dimen_10dp"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>
@@ -386,9 +410,15 @@
                     android:text="Claim 12000 $"
                     android:layout_marginLeft="@dimen/dimen_10dp"
                     android:layout_marginRight="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>
@@ -461,9 +491,15 @@
                     android:text="Claim 20000 $"
                     android:layout_marginLeft="@dimen/dimen_10dp"
                     android:layout_marginRight="@dimen/dimen_10dp"
+                    android:onClick="claim"
                     android:background="@drawable/button_bg"
                     android:layout_marginBottom="@dimen/dimen_10dp"
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/span_text"/>
 
 
             </LinearLayout>

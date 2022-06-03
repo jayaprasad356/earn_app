@@ -3,7 +3,6 @@ package com.lsa.ayu.helper;
 public class Constant {
     //public static final String MainBaseUrl = "http://192.168.43.38/earnapp/";
     public static final String MainBaseUrl = "https://loomsolaradmincenter.online/";
-    //public static final String MainBaseUrl = "http://earnapp.greymatterworks.in/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String SIGNUP_USER_URL = BaseUrl + "signup_user.php";
     public static final String CHECK_MOBILE_NUMBER_URL = BaseUrl + "checkmobilenumber.php";
@@ -24,6 +23,7 @@ public class Constant {
     public static final String LEVEL_PERCENTAGE_LIST_URL = BaseUrl + "level_percentage_list.php";
     public static final String PURCHASED_PLANS_URL = BaseUrl + "purchased_plans.php";
     public static final String UPDATE_UPI_URL = BaseUrl + "update_upi.php";
+    public static final String UPDATE_FCM = BaseUrl + "update_fcm.php";
     public static final String ID = "id";
     public static final String BALANCE = "balance";
     public static final String USER_MERCHANT_KEY = "xgTUVi";
@@ -38,6 +38,7 @@ public class Constant {
     public static final String DAILY_INCOME = "daily_income";
     public static final String VALID = "valid";
     public static final String AMOUNT = "amount";
+    public static final String FCM_ID = "fcm_id";
     public static final String EMAIL = "email";
     public static final String MOBILE = "mobile";
     public static final String REFERRAL = "referral";
@@ -52,6 +53,7 @@ public class Constant {
     public static String PAYUMONEY_MODE = "";
     public static final String MY_REFER_CODE = "my_refer_code";
     public static final String EARN = "earn";
+    public static final String STATUS = "status";
     public static final String DESCRIPION = "description";
     public static final String ROLE = "role";
     public static final String DATA = "data";

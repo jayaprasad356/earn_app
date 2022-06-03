@@ -2,7 +2,9 @@ package com.lsa.ayu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +23,7 @@ public class ReferEarnActivity extends AppCompatActivity {
         session = new Session(ReferEarnActivity.this);
         share_friends = findViewById(R.id.share_friends);
 
+
         share_friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,5 +40,20 @@ public class ReferEarnActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Share Via"));
             }
         });
+    }
+
+    public void claim(View view) {
+        try {
+
+            Intent myIntent = new Intent(Intent.ACTION_VIEW);
+
+            myIntent.setPackage("org.telegram.messenger");
+            myIntent.setData(Uri.parse("https://t.me/LoomSolar_reward"));
+
+            startActivity(myIntent);
+
+        } catch (Exception e) {
+            // show error message
+        }
     }
 }

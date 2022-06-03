@@ -39,7 +39,7 @@ public class WithdrawalAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         final Withdrawal withdrawal = withdrawals.get(position);
 
         holder.tvAmount.setText(withdrawal.getAmount());
-        holder.tvStatus.setText(withdrawal.getStatus());
+        holder.tvStatus.setText(withdrawal.getPayment_status());
         holder.tvTime.setText(withdrawal.getDate_created());
 
 
