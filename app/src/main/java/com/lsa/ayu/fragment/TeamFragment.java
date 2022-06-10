@@ -163,6 +163,7 @@ public class TeamFragment extends Fragment {
         params.put(Constant.USER_ID, session.getData(Constant.ID));
         params.put(Constant.REFERRAL, session.getData(Constant.MY_REFER_CODE));
         ApiConfig.RequestToVolley((result, response) -> {
+            Log.d("TEAM_RES",response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);

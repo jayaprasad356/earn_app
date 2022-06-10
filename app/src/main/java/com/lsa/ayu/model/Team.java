@@ -1,15 +1,16 @@
 package com.lsa.ayu.model;
 
 public class Team {
-    String id,mobile,name;
+    String id,mobile,name,contribution;
     public Team(){
 
     }
 
-    public Team(String id, String mobile, String name) {
+    public Team(String id, String mobile, String name, String contribution) {
         this.id = id;
         this.mobile = mobile;
         this.name = name;
+        this.contribution = contribution;
     }
 
     public String getId() {
@@ -34,5 +35,13 @@ public class Team {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getContribution() {
+        return contribution;
+    }
+
+    public void setContribution(String contribution) {
+        this.contribution = contribution;
     }
 }

@@ -40,6 +40,7 @@ public class TeamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         holder.tvName.setText(team.getName());
         holder.mobile.setText(s1+"******"+s2);
+        holder.contribution.setText(team.getContribution());
 
 
     }
@@ -52,12 +53,13 @@ public class TeamAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     static class ItemHolder extends RecyclerView.ViewHolder {
 
-        final TextView tvName,mobile;
+        final TextView tvName,mobile,contribution;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
             mobile = itemView.findViewById(R.id.tvMobile);
             tvName = itemView.findViewById(R.id.tvName);
+            contribution = itemView.findViewById(R.id.contribution);
         }
     }
 }

@@ -38,6 +38,7 @@ public class Constant {
     public static final String DAILY_INCOME = "daily_income";
     public static final String VALID = "valid";
     public static final String AMOUNT = "amount";
+    public static final String ACT_AMOUNT = "act_amount";
     public static final String FCM_ID = "fcm_id";
     public static final String EMAIL = "email";
     public static final String MOBILE = "mobile";

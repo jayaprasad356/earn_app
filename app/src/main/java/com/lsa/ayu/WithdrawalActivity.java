@@ -18,6 +18,7 @@ import com.lsa.ayu.helper.ApiConfig;
 import com.lsa.ayu.helper.Constant;
 import com.lsa.ayu.helper.Session;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -97,12 +98,16 @@ public class WithdrawalActivity extends AppCompatActivity {
         Map<String, String> params = new HashMap<>();
         params.put(Constant.USER_ID,session.getData(Constant.ID));
         params.put(Constant.AMOUNT,""+total_withdrawal);
+        params.put(Constant.ACT_AMOUNT,etWithdrawal.getText().toString().trim());
         ApiConfig.RequestToVolley((result, response) -> {
             Log.d("WITHDRAWAL_RES",response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        session.setData(Constant.BALANCE,jsonArray.getJSONObject(0).getString(Constant.BALANCE));
+                        session.setData(Constant.EARN,jsonArray.getJSONObject(0).getString(Constant.EARN));
                         Intent intent = new Intent(activity, MainActivity.class);
                         startActivity(intent);
                         Toast.makeText(this,jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();

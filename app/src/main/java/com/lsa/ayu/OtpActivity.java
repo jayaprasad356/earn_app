@@ -58,6 +58,7 @@ public class OtpActivity extends AppCompatActivity {
 
         }catch (Exception e){
 
+
         }
         otp_view.setOtpListener(new OTPListener() {
             @Override
@@ -91,6 +92,7 @@ public class OtpActivity extends AppCompatActivity {
         });
     }
     private void sendOTP(String mobilenumber) {
+        Log.d("OTP_RES",mobilenumber);
 
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
