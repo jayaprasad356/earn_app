@@ -100,7 +100,6 @@ public class WithdrawalActivity extends AppCompatActivity {
         params.put(Constant.AMOUNT,""+total_withdrawal);
         params.put(Constant.ACT_AMOUNT,etWithdrawal.getText().toString().trim());
         ApiConfig.RequestToVolley((result, response) -> {
-            Log.d("WITHDRAWAL_RES",response);
             if (result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);

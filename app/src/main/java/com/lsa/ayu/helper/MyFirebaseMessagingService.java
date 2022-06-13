@@ -40,7 +40,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String imageUrl = data.getString("image");
             String id = data.getString("id");
 
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
             MyNotificationManager mNotificationManager = new MyNotificationManager(getApplicationContext());
             mNotificationManager.showSmallNotification(title, message, intent);
 
