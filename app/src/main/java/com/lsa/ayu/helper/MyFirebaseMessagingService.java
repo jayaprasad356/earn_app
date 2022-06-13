@@ -7,6 +7,7 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.lsa.ayu.MainActivity;
+import com.lsa.ayu.SplashActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
